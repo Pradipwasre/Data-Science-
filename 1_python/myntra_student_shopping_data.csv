@@ -1,0 +1,301 @@
+Order_ID,Product_ID,Product_Name,Category,Sub_Category,Brand,Price,Discount_Percent,Final_Price,Rating,Number_of_Ratings,Size,Color,Student_Discount_Applied,Payment_Mode,Order_Date,Delivery_Days,City,Return_Status
+100204,MYN1203,Nike Sports Shoes Pro,Footwear,Sports Shoes,Nike,4002,0,4002.0,2.7,3457.0,8,Black,False,Net Banking,2025-04-19,4.0,,Not Returned
+100267,MYN1266,boAt Smart Watches Sport,Electronics,Smart Watches,boAt,5523,0,5523.0,3.8,4009.0,Free Size,Beige,False,Credit Card,2025-01-12,4.0,Hyderabad,Exchanged
+100153,MYN1152,JBL Bluetooth Speakers Pro,Electronics,Bluetooth Speakers,JBL,1151,30,805.7,4.7,159.0,Free Size,Blue,False,Net Banking,2025-07-05,6.0,Bangalore,Returned
+100010,MYN1009,Levis Sweatshirts Classic,Topwear,Sweatshirts,Levis,2150,30,1505.0,2.8,2691.0,XXL,Maroon,False,Debit Card,2025-01-01,6.0,Delhi,Not Returned
+100234,MYN1233,Roadster Jackets Edition,Winterwear,Jackets,Roadster,1042,40,625.2,2.8,4667.0,XL,Navy Blue,True,Cash on Delivery,2025-05-18,4.0,Jaipur,Not Returned
+100227,MYN1226,Woodland Sweaters Edition,Winterwear,Sweaters,Woodland,1574,0,1574.0,2.6,4999.0,XL,Maroon,False,UPI,2025-06-12,8.0,,Not Returned
+100197,MYN1196,Realme Ear Phones Edition,Electronics,Ear Phones,Realme,4101,50,2050.5,,,Free Size,Grey,True,Debit Card,2025-03-03,9.0,Ahmedabad,Returned
+100110,MYN1109,Levis Trousers Pro,Bottomwear,Trousers,Levis,728,30,509.6,3.1,149.0,XXL,Beige,True,Credit Card,2025-01-11,9.0,Delhi,Not Returned
+100006,MYN1005,Roadster Trousers Everyday,Bottomwear,Trousers,Roadster,1728,50,864.0,4.0,4912.0,S,Pink,False,Credit Card,2025-01-15,9.0,Pune,Not Returned
+100176,MYN1175,Being Human Sweatshirts Casual,Topwear,Sweatshirts,Being Human,1350,50,675.0,3.4,1709.0,M,Red,False,Debit Card,2025-04-16,8.0,Mumbai,Not Returned
+100238,MYN1237,Woodland Sweaters Classic,Winterwear,Sweaters,Woodland,3313,30,2319.1,3.0,2286.0,M,Grey,False,Net Banking,2025-04-14,3.0,Ahmedabad,Not Returned
+100058,MYN1057,boAt Smart Watches Sport,Electronics,Smart Watches,boAt,1723,0,1723.0,4.9,256.0,Free Size,White,True,Cash on Delivery,2025-07-16,8.0,Pune,Not Returned
+100219,MYN1218,Wrangler Track Pants Edition,Bottomwear,Track Pants,Wrangler,1677,40,1006.2,4.5,3260.0,XL,Pink,True,Debit Card,2025-03-01,4.0,Pune,Not Returned
+100046,MYN1045,American Tourister Sling Bags Classic,Bags,Sling Bags,American Tourister,2763,60,1105.2,3.8,729.0,Free Size,Olive,False,Cash on Delivery,2025-03-27,6.0,Pune,Not Returned
+100183,MYN1182,Flying Machine Trousers Pro,Bottomwear,Trousers,Flying Machine,2795,40,1677.0,3.1,4154.0,M,Maroon,True,Cash on Delivery,2025-01-03,7.0,Ahmedabad,Not Returned
+100222,MYN1221,Realme Ear Phones Everyday,Electronics,Ear Phones,Realme,3247,30,2272.9,4.5,2011.0,Free Size,Red,True,Debit Card,2025-05-23,7.0,Kolkata,Not Returned
+100290,MYN1289,Realme Ear Phones Pro,Electronics,Ear Phones,Realme,2891,30,2023.7,,,Free Size,Olive,True,Credit Card,2025-01-16,3.0,Jaipur,Not Returned
+100212,MYN1211,Puma Caps Casual,Accessories,Caps,Puma,2782,30,1947.4,4.6,461.0,Free Size,Olive,True,Debit Card,2025-01-22,4.0,Lucknow,Not Returned
+100149,MYN1148,Wildcraft Sling Bags Pro,Bags,Sling Bags,Wildcraft,1938,60,775.2,4.1,1108.0,Free Size,Maroon,True,Cash on Delivery,2025-03-03,8.0,Chennai,Not Returned
+100166,MYN1165,Titan Wallets Casual,Accessories,Wallets,Titan,3515,30,2460.5,2.6,1864.0,Free Size,Red,False,Debit Card,2025-03-30,7.0,Jaipur,Not Returned
+100079,MYN1078,Levis Sweatshirts Casual,Topwear,Sweatshirts,Levis,1857,10,1671.3,4.3,4655.0,XXL,Blue,False,Cash on Delivery,2025-01-01,3.0,Pune,Not Returned
+100114,MYN1113,Adidas Sneakers Edition,Footwear,Sneakers,Adidas,1129,30,790.3,3.4,3116.0,7,Red,False,Debit Card,2025-07-06,4.0,Lucknow,Not Returned
+100250,MYN1249,Wildcraft Sling Bags Classic,Bags,Sling Bags,Wildcraft,3160,40,1896.0,4.9,2947.0,Free Size,White,False,Cash on Delivery,2025-06-19,4.0,Kolkata,Not Returned
+100251,MYN1250,Roadster Jeans Sport,Bottomwear,Jeans,Roadster,2819,30,1973.3,3.6,1144.0,XXL,Red,False,UPI,2025-06-15,6.0,Hyderabad,Not Returned
+100105,MYN1104,HRX Mufflers Casual,Winterwear,Mufflers,HRX,1978,30,1384.6,3.6,3578.0,M,Beige,False,Cash on Delivery,2025-03-27,5.0,Mumbai,Not Returned
+100043,MYN1042,Woodland Mufflers Classic,Winterwear,Mufflers,Woodland,1474,20,1179.2,4.2,3070.0,S,Maroon,True,Cash on Delivery,2025-06-11,4.0,Jaipur,Exchanged
+100282,MYN1281,boAt Ear Phones Sport,Electronics,Ear Phones,boAt,3466,40,2079.6,3.7,4791.0,Free Size,White,False,Cash on Delivery,2025-04-12,4.0,Chennai,Not Returned
+100296,MYN1295,Wrangler Jeans Everyday,Bottomwear,Jeans,Wrangler,1416,60,566.4,,,XXL,Blue,False,Net Banking,2025-03-05,6.0,Lucknow,Exchanged
+100158,MYN1157,Campus Sports Shoes Casual,Footwear,Sports Shoes,Campus,2645,0,2645.0,4.1,3929.0,7,Olive,False,Credit Card,2025-01-28,3.0,Chennai,Returned
+100239,MYN1238,HRX Hoodies Classic,Topwear,Hoodies,HRX,866,20,692.8,5.0,2977.0,XXL,Red,False,Net Banking,2025-05-09,8.0,Hyderabad,Not Returned
+100018,MYN1017,Puma Formal Shoes Casual,Footwear,Formal Shoes,Puma,2438,20,1950.4,4.1,198.0,11,Black,False,UPI,2025-05-19,8.0,Chennai,Not Returned
+100165,MYN1164,Fastrack Watches Classic,Accessories,Watches,Fastrack,1663,40,997.8,3.6,4613.0,Free Size,Olive,False,Net Banking,2025-03-27,8.0,Ahmedabad,Not Returned
+100034,MYN1033,Roadster Trousers Pro,Bottomwear,Trousers,Roadster,2910,0,2910.0,,,M,Beige,False,Debit Card,2025-04-19,9.0,Hyderabad,Not Returned
+100025,MYN1024,Noise Smart Watches Edition,Electronics,Smart Watches,Noise,2017,20,1613.6,3.9,955.0,Free Size,Red,False,Debit Card,2025-04-25,7.0,,Not Returned
+100216,MYN1215,WROGN Wallets Classic,Accessories,Wallets,WROGN,3788,50,1894.0,3.7,1125.0,Free Size,Beige,True,Net Banking,2025-07-05,5.0,Pune,Not Returned
+100120,MYN1119,Ray-Ban Caps Everyday,Accessories,Caps,Ray-Ban,1748,30,1223.6,5.0,4347.0,Free Size,Maroon,True,Cash on Delivery,2025-01-13,6.0,Hyderabad,Not Returned
+100008,MYN1007,Titan Wallets Everyday,Accessories,Wallets,Titan,2867,0,2867.0,4.5,392.0,Free Size,Maroon,True,Debit Card,2025-06-12,4.0,Jaipur,Not Returned
+100091,MYN1090,Wrangler Trousers Pro,Bottomwear,Trousers,Wrangler,2238,60,895.2,4.5,3877.0,XXL,Olive,False,Net Banking,2025-03-13,8.0,Bangalore,Returned
+100047,MYN1046,Roadster Mufflers Sport,Winterwear,Mufflers,Roadster,963,20,770.4,4.9,4947.0,S,Olive,False,Cash on Delivery,2025-04-21,9.0,Kolkata,Not Returned
+100074,MYN1073,Campus Slippers Casual,Footwear,Slippers,Campus,3191,0,3191.0,,,10,Olive,False,Cash on Delivery,2025-04-21,7.0,Delhi,Not Returned
+100094,MYN1093,Sparx Slippers Edition,Footwear,Slippers,Sparx,4873,30,3411.1,3.7,3601.0,7,White,False,Cash on Delivery,2025-05-08,4.0,Hyderabad,Not Returned
+100077,MYN1076,Fastrack Sling Bags Sport,Bags,Sling Bags,Fastrack,3445,40,2067.0,5.0,6.0,Free Size,Grey,False,Net Banking,2025-03-07,5.0,Bangalore,Not Returned
+100287,MYN1286,Fastrack Sling Bags Casual,Bags,Sling Bags,Fastrack,517,0,517.0,2.5,4675.0,Free Size,Olive,False,Cash on Delivery,2025-03-06,5.0,Lucknow,Not Returned
+100061,MYN1060,HRX Mufflers Pro,Winterwear,Mufflers,HRX,3423,40,2053.8,3.4,2049.0,XL,Red,False,Net Banking,2025-02-20,6.0,Jaipur,Exchanged
+100078,MYN1077,H&M Jackets Sport,Winterwear,Jackets,H&M,2328,10,2095.2,4.2,4290.0,S,Red,False,Debit Card,2025-03-20,4.0,Ahmedabad,Not Returned
+100064,MYN1063,Roadster Jackets Classic,Winterwear,Jackets,Roadster,1462,60,584.8,4.0,1359.0,S,Pink,False,UPI,2025-04-01,4.0,Ahmedabad,Not Returned
+100235,MYN1234,Fastrack Duffel Bags Casual,Bags,Duffel Bags,Fastrack,2578,30,1804.6,4.4,4980.0,Free Size,Pink,True,Credit Card,2025-05-23,9.0,Hyderabad,Not Returned
+100230,MYN1229,Flying Machine Jeans Classic,Bottomwear,Jeans,Flying Machine,2845,30,1991.5,3.7,3653.0,XXL,Navy Blue,False,Debit Card,2025-05-11,8.0,Mumbai,Returned
+100112,MYN1111,Levis Hoodies Classic,Topwear,Hoodies,Levis,1711,10,1539.9,4.1,1525.0,L,Maroon,False,Cash on Delivery,2025-03-14,2.0,Lucknow,Not Returned
+100232,MYN1231,boAt Smart Watches Everyday,Electronics,Smart Watches,boAt,1371,40,822.6,2.7,3670.0,Free Size,White,True,Debit Card,2025-06-26,2.0,Chennai,Not Returned
+100181,MYN1180,Levis Joggers Edition,Bottomwear,Joggers,Levis,1840,0,1840.0,2.7,4449.0,XL,Red,False,Debit Card,2025-06-13,4.0,,Not Returned
+100145,MYN1144,Sparx Sandals Casual,Footwear,Sandals,Sparx,2342,40,1405.2,4.7,4198.0,6,White,False,Cash on Delivery,2025-06-18,9.0,Bangalore,Not Returned
+100240,MYN1239,Roadster Mufflers Pro,Winterwear,Mufflers,Roadster,3006,40,1803.6,4.9,2592.0,XL,Black,False,Credit Card,2025-05-17,5.0,Bangalore,Not Returned
+100076,MYN1075,Woodland Sweaters Classic,Winterwear,Sweaters,Woodland,2304,10,2073.6,2.9,3518.0,M,Maroon,False,Debit Card,2025-03-03,7.0,Hyderabad,Not Returned
+100298,MYN1297,Roadster Sweaters Casual,Winterwear,Sweaters,Roadster,2709,50,1354.5,4.2,4119.0,XXL,Olive,False,Net Banking,2025-05-29,4.0,Delhi,Not Returned
+100279,MYN1278,American Tourister Laptop Bags Pro,Bags,Laptop Bags,American Tourister,1494,20,1195.2,4.5,2835.0,Free Size,Olive,False,Debit Card,2025-06-14,8.0,Delhi,Not Returned
+100098,MYN1097,Bata Sports Shoes Everyday,Footwear,Sports Shoes,Bata,3261,20,2608.8,4.6,2066.0,6,Black,False,Credit Card,2025-01-01,7.0,Ahmedabad,Returned
+100093,MYN1092,Wrangler Jeans Classic,Bottomwear,Jeans,Wrangler,1165,20,932.0,4.5,4213.0,S,Maroon,False,Debit Card,2025-06-03,2.0,Chennai,Not Returned
+100193,MYN1192,H&M Jackets Sport,Topwear,Jackets,H&M,1362,20,1089.6,3.8,3037.0,L,Grey,False,Credit Card,2025-03-01,8.0,Jaipur,Not Returned
+100026,MYN1025,Fastrack Watches Sport,Accessories,Watches,Fastrack,2576,50,1288.0,4.1,226.0,Free Size,Red,True,Debit Card,2025-01-21,7.0,Pune,Not Returned
+100233,MYN1232,Fastrack Sling Bags Casual,Bags,Sling Bags,Fastrack,696,10,626.4,4.2,3138.0,Free Size,Blue,False,Credit Card,2025-03-15,3.0,Lucknow,Not Returned
+100060,MYN1059,Flying Machine Shorts Edition,Bottomwear,Shorts,Flying Machine,2083,0,2083.0,2.7,4572.0,XL,Red,False,Debit Card,2025-07-28,6.0,Pune,Not Returned
+100007,MYN1006,Noise Bluetooth Speakers Everyday,Electronics,Bluetooth Speakers,Noise,1136,50,568.0,3.4,4860.0,Free Size,Black,True,UPI,2025-07-07,5.0,Kolkata,Not Returned
+100186,MYN1185,Fastrack Belts Casual,Accessories,Belts,Fastrack,3649,10,3284.1,5.0,3944.0,Free Size,Beige,False,Net Banking,2025-04-18,2.0,Lucknow,Not Returned
+100174,MYN1173,Roadster Shorts Pro,Bottomwear,Shorts,Roadster,739,20,591.2,3.3,106.0,L,Blue,False,Debit Card,2025-06-13,7.0,Ahmedabad,Not Returned
+100031,MYN1030,Puma Sandals Classic,Footwear,Sandals,Puma,1244,30,870.8,2.7,2951.0,7,Grey,False,UPI,2025-02-26,5.0,Jaipur,Not Returned
+100023,MYN1022,Fastrack Sunglasses Sport,Accessories,Sunglasses,Fastrack,552,60,220.8,,,Free Size,Navy Blue,True,Net Banking,2025-06-02,6.0,Pune,Exchanged
+100257,MYN1256,Bata Sandals Everyday,Footwear,Sandals,Bata,1404,30,982.8,2.8,579.0,7,White,True,Credit Card,2025-03-27,5.0,Bangalore,Not Returned
+100057,MYN1056,Woodland Jackets Edition,Winterwear,Jackets,Woodland,1438,60,575.2,,,L,Navy Blue,False,Credit Card,2025-07-10,2.0,Hyderabad,Returned
+100187,MYN1186,Puma Formal Shoes Classic,Footwear,Formal Shoes,Puma,4703,50,2351.5,4.0,2508.0,10,White,True,Cash on Delivery,2025-02-07,5.0,Mumbai,Not Returned
+100109,MYN1108,Levis Sweatshirts Sport,Topwear,Sweatshirts,Levis,1129,50,564.5,3.5,4798.0,XXL,Black,False,Debit Card,2025-05-02,,Hyderabad,Not Returned
+100127,MYN1126,WROGN Shirts Pro,Topwear,Shirts,WROGN,1248,10,1123.2,3.8,2377.0,M,Navy Blue,True,Debit Card,2025-03-09,7.0,Mumbai,Not Returned
+100231,MYN1230,Puma Wallets Casual,Accessories,Wallets,Puma,1151,20,920.8,2.8,4725.0,Free Size,Pink,True,Debit Card,2025-07-15,8.0,Lucknow,Returned
+100194,MYN1193,Sparx Slippers Everyday,Footwear,Slippers,Sparx,1388,10,1249.2,2.7,1954.0,11,Beige,False,Cash on Delivery,2025-01-10,,Chennai,Not Returned
+100130,MYN1129,HRX Jackets Edition,Winterwear,Jackets,HRX,2023,30,1416.1,4.0,2746.0,XXL,Maroon,False,Debit Card,2025-03-08,9.0,Jaipur,Exchanged
+100283,MYN1282,Being Human Sweatshirts Casual,Topwear,Sweatshirts,Being Human,1638,30,1146.6,4.7,3803.0,M,Blue,False,Net Banking,2025-03-23,5.0,Pune,Returned
+100083,MYN1082,Woodland Mufflers Edition,Winterwear,Mufflers,Woodland,1571,40,942.6,4.5,1315.0,XL,Blue,True,Net Banking,2025-06-14,6.0,Hyderabad,Not Returned
+100085,MYN1084,Levis Hoodies Casual,Topwear,Hoodies,Levis,2287,20,1829.6,3.5,4034.0,M,Navy Blue,True,UPI,2025-07-25,6.0,Kolkata,Not Returned
+100067,MYN1066,Nike Sports Shoes Casual,Footwear,Sports Shoes,Nike,1041,30,728.7,3.0,1720.0,10,Maroon,False,UPI,2025-01-25,4.0,Hyderabad,Not Returned
+100289,MYN1288,Wildcraft Sling Bags Sport,Bags,Sling Bags,Wildcraft,3249,0,3249.0,3.5,414.0,Free Size,White,False,Net Banking,2025-04-12,4.0,Lucknow,Not Returned
+100164,MYN1163,Roadster Mufflers Pro,Winterwear,Mufflers,Roadster,1617,40,970.2,2.8,4404.0,XL,Olive,False,Net Banking,2025-03-21,3.0,Bangalore,Not Returned
+100155,MYN1154,Flying Machine Joggers Edition,Bottomwear,Joggers,Flying Machine,2981,20,2384.8,4.0,1270.0,L,Pink,False,UPI,2025-05-05,5.0,Bangalore,Not Returned
+100020,MYN1019,Fastrack Watches Everyday,Accessories,Watches,Fastrack,3275,30,2292.5,4.6,1803.0,Free Size,Black,True,Credit Card,2025-07-04,2.0,Lucknow,Returned
+100125,MYN1124,Roadster Track Pants Edition,Bottomwear,Track Pants,Roadster,2193,10,1973.7,,,M,Olive,False,Cash on Delivery,2025-02-26,3.0,Mumbai,Not Returned
+100080,MYN1079,Fastrack Sling Bags Classic,Bags,Sling Bags,Fastrack,2327,30,1628.9,3.4,2040.0,Free Size,Maroon,False,Cash on Delivery,2025-01-10,6.0,Bangalore,Not Returned
+100115,MYN1114,Skybags Sling Bags Classic,Bags,Sling Bags,Skybags,2019,40,1211.4,4.1,3153.0,Free Size,Black,False,UPI,2025-04-28,9.0,Mumbai,Not Returned
+100119,MYN1118,Levis Hoodies Pro,Topwear,Hoodies,Levis,1581,20,1264.8,3.9,3960.0,S,Navy Blue,False,Cash on Delivery,2025-01-04,6.0,Ahmedabad,Not Returned
+100073,MYN1072,Flying Machine Shorts Classic,Bottomwear,Shorts,Flying Machine,1814,30,1269.8,4.6,126.0,L,Red,False,UPI,2025-02-13,2.0,Kolkata,Returned
+100016,MYN1015,Titan Caps Sport,Accessories,Caps,Titan,2152,20,1721.6,3.7,1637.0,Free Size,White,False,UPI,2025-04-23,9.0,Delhi,Not Returned
+100011,MYN1010,Ray-Ban Wallets Classic,Accessories,Wallets,Ray-Ban,3141,20,2512.8,2.6,1485.0,Free Size,Navy Blue,False,UPI,2025-06-28,8.0,Hyderabad,Not Returned
+100195,MYN1194,H&M Mufflers Everyday,Winterwear,Mufflers,H&M,2185,60,874.0,3.1,4245.0,M,Red,False,Credit Card,2025-03-14,5.0,Lucknow,Not Returned
+100102,MYN1101,Roadster Jackets Everyday,Topwear,Jackets,Roadster,1686,60,674.4,4.9,4278.0,XXL,Red,False,UPI,2025-05-22,8.0,Lucknow,Not Returned
+100069,MYN1068,Adidas Sneakers Edition,Footwear,Sneakers,Adidas,3580,10,3222.0,3.3,2297.0,10,Red,False,UPI,2025-02-16,2.0,Hyderabad,Exchanged
+100225,MYN1224,Roadster Jackets Classic,Winterwear,Jackets,Roadster,3007,40,1804.2,,,M,Blue,False,Net Banking,2025-03-31,5.0,Ahmedabad,Not Returned
+100038,MYN1037,HRX Shorts Casual,Bottomwear,Shorts,HRX,2069,20,1655.2,4.4,2745.0,XXL,Navy Blue,True,Cash on Delivery,2025-01-29,7.0,Kolkata,Returned
+100017,MYN1016,Being Human Shirts Casual,Topwear,Shirts,Being Human,1097,60,438.8,3.1,1708.0,M,Pink,False,Cash on Delivery,2025-06-09,7.0,Lucknow,Not Returned
+100180,MYN1179,Roadster Track Pants Pro,Bottomwear,Track Pants,Roadster,1519,20,1215.2,4.3,3352.0,XL,Beige,False,Debit Card,2025-07-07,7.0,Mumbai,Not Returned
+100148,MYN1147,Levis Sweatshirts Casual,Topwear,Sweatshirts,Levis,488,10,439.2,2.8,317.0,S,Red,False,Cash on Delivery,2025-07-14,4.0,Ahmedabad,Returned
+100275,MYN1274,Sparx Slippers Sport,Footwear,Slippers,Sparx,1243,30,870.1,4.6,2417.0,8,Maroon,False,Net Banking,2025-01-29,6.0,Mumbai,Not Returned
+100068,MYN1067,JBL Ear Phones Everyday,Electronics,Ear Phones,JBL,4955,10,4459.5,4.6,4700.0,Free Size,Grey,False,UPI,2025-06-19,6.0,Bangalore,Returned
+100229,MYN1228,Being Human Hoodies Everyday,Topwear,Hoodies,Being Human,2041,20,1632.8,4.7,672.0,S,Pink,True,Cash on Delivery,2025-07-22,5.0,,Not Returned
+100070,MYN1069,WROGN Caps Casual,Accessories,Caps,WROGN,3177,20,2541.6,,,Free Size,Black,False,Debit Card,2025-01-01,9.0,Delhi,Exchanged
+100032,MYN1031,Titan Sunglasses Pro,Accessories,Sunglasses,Titan,698,50,349.0,2.6,4930.0,Free Size,Navy Blue,False,UPI,2025-02-01,8.0,Chennai,Not Returned
+100184,MYN1183,American Tourister Sling Bags Everyday,Bags,Sling Bags,American Tourister,3316,20,2652.8,3.3,662.0,Free Size,White,False,Cash on Delivery,2025-02-13,3.0,Chennai,Not Returned
+100266,MYN1265,Roadster Shirts Classic,Topwear,Shirts,Roadster,2487,50,1243.5,4.0,910.0,XXL,Beige,False,Debit Card,2025-07-29,4.0,Mumbai,Not Returned
+100226,MYN1225,Skybags Sling Bags Classic,Bags,Sling Bags,Skybags,3338,0,3338.0,3.1,4284.0,Free Size,Red,False,UPI,2025-02-26,8.0,Bangalore,Not Returned
+100141,MYN1140,Puma Sandals Sport,Footwear,Sandals,Puma,1932,30,1352.4,3.9,985.0,10,Maroon,False,UPI,2025-05-25,6.0,Pune,Returned
+100019,MYN1018,Levis Hoodies Casual,Topwear,Hoodies,Levis,1007,30,704.9,4.2,1370.0,M,Red,False,Credit Card,2025-07-14,8.0,Mumbai,Returned
+100182,MYN1181,boAt Ear Phones Everyday,Electronics,Ear Phones,boAt,3845,20,3076.0,,,Free Size,Red,True,Cash on Delivery,2025-03-01,3.0,Hyderabad,Not Returned
+100097,MYN1096,Roadster Jackets Everyday,Winterwear,Jackets,Roadster,2423,10,2180.7,3.2,1760.0,L,Black,False,Debit Card,2025-05-21,7.0,Mumbai,Returned
+100133,MYN1132,American Tourister Laptop Bags Casual,Bags,Laptop Bags,American Tourister,3307,20,2645.6,4.4,3999.0,Free Size,Olive,True,UPI,2025-03-23,5.0,Mumbai,Not Returned
+100263,MYN1262,H&M Jackets Classic,Winterwear,Jackets,H&M,2735,20,2188.0,4.2,3373.0,S,Olive,True,Debit Card,2025-03-31,8.0,Hyderabad,Not Returned
+100087,MYN1086,WROGN T-Shirts Edition,Topwear,T-Shirts,WROGN,1519,40,911.4,3.7,1866.0,L,Beige,False,Debit Card,2025-04-07,7.0,Hyderabad,Not Returned
+100249,MYN1248,Sparx Slippers Classic,Footwear,Slippers,Sparx,3604,60,1441.6,2.8,596.0,7,Maroon,False,Credit Card,2025-04-23,2.0,Bangalore,Not Returned
+100246,MYN1245,Bata Formal Shoes Edition,Footwear,Formal Shoes,Bata,1154,50,577.0,3.2,2239.0,7,Beige,False,UPI,2025-03-08,5.0,Delhi,Not Returned
+100117,MYN1116,Wrangler Jeans Classic,Bottomwear,Jeans,Wrangler,1309,20,1047.2,2.8,4233.0,XXL,Beige,False,UPI,2025-04-25,9.0,Hyderabad,Not Returned
+100147,MYN1146,Wrangler Trousers Classic,Bottomwear,Trousers,Wrangler,1534,0,1534.0,3.4,918.0,XXL,Olive,False,Debit Card,2025-04-13,3.0,Pune,Not Returned
+100293,MYN1292,Fastrack Duffel Bags Everyday,Bags,Duffel Bags,Fastrack,3327,10,2994.3,4.7,1590.0,Free Size,Blue,False,Credit Card,2025-02-21,5.0,Kolkata,Not Returned
+100198,MYN1197,Being Human Jackets Everyday,Topwear,Jackets,Being Human,1948,10,1753.2,2.8,2294.0,XL,Grey,False,Debit Card,2025-03-20,6.0,Delhi,Not Returned
+100207,MYN1206,American Tourister Sling Bags Edition,Bags,Sling Bags,American Tourister,2875,10,2587.5,4.0,1614.0,Free Size,White,False,UPI,2025-04-15,2.0,Kolkata,Not Returned
+100056,MYN1055,Woodland Mufflers Casual,Winterwear,Mufflers,Woodland,1666,20,1332.8,2.8,4469.0,XXL,Red,False,Credit Card,2025-01-08,3.0,Mumbai,Not Returned
+100173,MYN1172,WROGN Belts Edition,Accessories,Belts,WROGN,2965,30,2075.5,4.7,715.0,Free Size,Navy Blue,False,UPI,2025-02-20,8.0,Mumbai,Not Returned
+100185,MYN1184,Sparx Slippers Pro,Footwear,Slippers,Sparx,4618,0,4618.0,3.6,2960.0,7,Navy Blue,False,Net Banking,2025-01-12,2.0,Pune,Not Returned
+100168,MYN1167,Noise Bluetooth Speakers Everyday,Electronics,Bluetooth Speakers,Noise,3431,20,2744.8,,,Free Size,Maroon,True,Net Banking,2025-07-22,5.0,Ahmedabad,Not Returned
+100140,MYN1139,Being Human Sweatshirts Casual,Topwear,Sweatshirts,Being Human,1387,20,1109.6,3.2,4666.0,M,White,False,Cash on Delivery,2025-05-04,,Pune,Not Returned
+100254,MYN1253,Nike Slippers Classic,Footwear,Slippers,Nike,3478,30,2434.6,4.1,1300.0,6,Black,False,Net Banking,2025-04-11,4.0,Jaipur,Not Returned
+100039,MYN1038,Ray-Ban Caps Casual,Accessories,Caps,Ray-Ban,2072,30,1450.4,2.7,2480.0,Free Size,Black,False,Debit Card,2025-03-26,8.0,Ahmedabad,Not Returned
+100126,MYN1125,HRX Jackets Everyday,Winterwear,Jackets,HRX,3435,30,2404.5,4.0,1597.0,XXL,White,False,Cash on Delivery,2025-05-03,3.0,Delhi,Not Returned
+100196,MYN1195,HRX Mufflers Casual,Winterwear,Mufflers,HRX,2494,60,997.6,4.5,1383.0,XXL,Beige,False,Net Banking,2025-05-04,5.0,Kolkata,Not Returned
+100284,MYN1283,Skybags Laptop Bags Pro,Bags,Laptop Bags,Skybags,3318,10,2986.2,2.8,116.0,Free Size,Black,False,Net Banking,2025-06-22,2.0,Ahmedabad,Not Returned
+100138,MYN1137,Puma Caps Classic,Accessories,Caps,Puma,3403,40,2041.8,3.6,1454.0,Free Size,Maroon,True,Cash on Delivery,2025-01-29,5.0,Hyderabad,Not Returned
+100113,MYN1112,Ray-Ban Watches Casual,Accessories,Watches,Ray-Ban,359,20,287.2,,,Free Size,Pink,False,Net Banking,2025-02-08,4.0,Delhi,Exchanged
+100169,MYN1168,HRX Mufflers Classic,Winterwear,Mufflers,HRX,3143,40,1885.8,3.6,3713.0,S,Grey,True,Cash on Delivery,2025-03-29,7.0,Bangalore,Not Returned
+100118,MYN1117,Roadster Sweaters Sport,Winterwear,Sweaters,Roadster,1688,0,1688.0,3.6,1467.0,XXL,Blue,True,Debit Card,2025-04-13,2.0,Bangalore,Not Returned
+100278,MYN1277,Roadster Hoodies Pro,Topwear,Hoodies,Roadster,1402,20,1121.6,4.0,1304.0,L,Blue,False,UPI,2025-05-05,4.0,Pune,Exchanged
+100272,MYN1271,Nike Sneakers Pro,Footwear,Sneakers,Nike,4263,40,2557.8,4.0,2929.0,9,Olive,False,UPI,2025-02-07,9.0,Hyderabad,Not Returned
+100156,MYN1155,Being Human Jackets Sport,Topwear,Jackets,Being Human,928,60,371.2,2.9,940.0,XXL,Black,True,UPI,2025-01-14,,Ahmedabad,Not Returned
+100177,MYN1176,boAt Bluetooth Speakers Pro,Electronics,Bluetooth Speakers,boAt,808,20,646.4,4.6,2632.0,Free Size,Navy Blue,True,Cash on Delivery,2025-06-01,9.0,Bangalore,Exchanged
+100179,MYN1178,WROGN Jackets Edition,Topwear,Jackets,WROGN,881,30,616.7,3.9,650.0,S,Olive,True,Cash on Delivery,2025-07-20,7.0,,Not Returned
+100003,MYN1002,Bata Sports Shoes Casual,Footwear,Sports Shoes,Bata,1746,10,1571.4,2.7,3006.0,7,Grey,False,UPI,2025-02-20,5.0,Mumbai,Not Returned
+100116,MYN1115,WROGN Belts Edition,Accessories,Belts,WROGN,3941,60,1576.4,,,Free Size,Black,False,Credit Card,2025-02-16,9.0,Ahmedabad,Not Returned
+100144,MYN1143,Levis Trousers Classic,Bottomwear,Trousers,Levis,715,60,286.0,2.9,3861.0,L,Red,False,Net Banking,2025-01-18,7.0,Bangalore,Not Returned
+100178,MYN1177,Levis Jeans Edition,Bottomwear,Jeans,Levis,1915,40,1149.0,2.9,1463.0,S,Olive,False,Cash on Delivery,2025-03-10,8.0,Jaipur,Returned
+100121,MYN1120,Levis Track Pants Edition,Bottomwear,Track Pants,Levis,2513,20,2010.4,3.7,4793.0,S,Black,False,Debit Card,2025-01-16,9.0,Mumbai,Not Returned
+100211,MYN1210,WROGN Wallets Everyday,Accessories,Wallets,WROGN,945,0,945.0,3.3,662.0,Free Size,White,False,Debit Card,2025-03-30,7.0,Kolkata,Not Returned
+100261,MYN1260,American Tourister Sling Bags Classic,Bags,Sling Bags,American Tourister,2329,10,2096.1,3.5,2430.0,Free Size,Beige,True,Debit Card,2025-01-09,9.0,Chennai,Not Returned
+100128,MYN1127,boAt Bluetooth Speakers Everyday,Electronics,Bluetooth Speakers,boAt,3481,30,2436.7,2.6,1356.0,Free Size,Pink,True,Net Banking,2025-06-19,2.0,Bangalore,Not Returned
+100075,MYN1074,Wrangler Shorts Classic,Bottomwear,Shorts,Wrangler,2140,30,1498.0,,,XXL,Grey,False,Credit Card,2025-07-17,6.0,Delhi,Not Returned
+100030,MYN1029,boAt Smart Watches Classic,Electronics,Smart Watches,boAt,2208,50,1104.0,,,Free Size,Navy Blue,False,UPI,2025-05-17,4.0,Ahmedabad,Not Returned
+100084,MYN1083,Wildcraft Backpacks Casual,Bags,Backpacks,Wildcraft,1099,40,659.4,3.6,4712.0,Free Size,Red,True,UPI,2025-01-14,9.0,Delhi,Not Returned
+100270,MYN1269,H&M Mufflers Everyday,Winterwear,Mufflers,H&M,2769,20,2215.2,4.0,2042.0,S,Grey,False,Credit Card,2025-02-26,7.0,Pune,Not Returned
+100108,MYN1107,Flying Machine Jeans Sport,Bottomwear,Jeans,Flying Machine,2680,10,2412.0,2.9,2075.0,XL,Grey,True,Debit Card,2025-02-26,8.0,Chennai,Not Returned
+100224,MYN1223,Fastrack Watches Pro,Accessories,Watches,Fastrack,3103,50,1551.5,3.1,4677.0,Free Size,Olive,True,Net Banking,2025-04-03,,Kolkata,Not Returned
+100159,MYN1158,Skybags Sling Bags Sport,Bags,Sling Bags,Skybags,2545,10,2290.5,3.1,3082.0,Free Size,Olive,True,Cash on Delivery,2025-07-14,7.0,Lucknow,Not Returned
+100281,MYN1280,Levis T-Shirts Casual,Topwear,T-Shirts,Levis,1909,50,954.5,,,XXL,Grey,True,Debit Card,2025-01-12,7.0,Chennai,Not Returned
+100247,MYN1246,Puma Sunglasses Everyday,Accessories,Sunglasses,Puma,2489,40,1493.4,3.5,460.0,Free Size,Black,False,Debit Card,2025-05-25,8.0,Kolkata,Not Returned
+100223,MYN1222,Puma Belts Casual,Accessories,Belts,Puma,3770,30,2639.0,4.9,3697.0,Free Size,Beige,False,UPI,2025-04-04,7.0,Chennai,Returned
+100066,MYN1065,Wildcraft Laptop Bags Sport,Bags,Laptop Bags,Wildcraft,1852,30,1296.4,5.0,4301.0,Free Size,White,True,Credit Card,2025-05-06,4.0,Mumbai,Not Returned
+100199,MYN1198,Realme Ear Phones Pro,Electronics,Ear Phones,Realme,3883,50,1941.5,4.1,2386.0,Free Size,Grey,False,Credit Card,2025-06-22,9.0,Hyderabad,Not Returned
+100086,MYN1085,Titan Sunglasses Casual,Accessories,Sunglasses,Titan,2925,10,2632.5,4.5,2036.0,Free Size,Maroon,False,UPI,2025-06-04,5.0,Lucknow,Not Returned
+100214,MYN1213,Being Human Sweatshirts Everyday,Topwear,Sweatshirts,Being Human,760,20,608.0,3.0,1856.0,XL,Olive,False,UPI,2025-04-16,3.0,Hyderabad,Not Returned
+100160,MYN1159,Flying Machine Shorts Casual,Bottomwear,Shorts,Flying Machine,2227,20,1781.6,4.0,2361.0,M,Olive,False,Debit Card,2025-03-05,7.0,Bangalore,Not Returned
+100013,MYN1012,Puma Slippers Casual,Footwear,Slippers,Puma,3571,20,2856.8,,,8,Red,True,UPI,2025-05-14,5.0,Ahmedabad,Not Returned
+100036,MYN1035,Wrangler Trousers Sport,Bottomwear,Trousers,Wrangler,2573,50,1286.5,4.2,1013.0,S,Beige,False,Credit Card,2025-05-09,3.0,,Exchanged
+100029,MYN1028,Roadster Sweaters Everyday,Winterwear,Sweaters,Roadster,826,20,660.8,3.5,570.0,L,Black,True,Debit Card,2025-03-08,9.0,Hyderabad,Not Returned
+100143,MYN1142,JBL Smart Watches Sport,Electronics,Smart Watches,JBL,4764,10,4287.6,3.9,1017.0,Free Size,White,False,Cash on Delivery,2025-07-07,8.0,Ahmedabad,Not Returned
+100285,MYN1284,HRX Mufflers Everyday,Winterwear,Mufflers,HRX,1735,60,694.0,3.1,2768.0,XL,Navy Blue,False,UPI,2025-04-24,9.0,Chennai,Returned
+100255,MYN1254,American Tourister Backpacks Edition,Bags,Backpacks,American Tourister,1846,50,923.0,,,Free Size,White,False,Credit Card,2025-03-06,9.0,Bangalore,Not Returned
+100171,MYN1170,Levis Sweatshirts Edition,Topwear,Sweatshirts,Levis,2362,30,1653.4,3.4,3866.0,L,Pink,False,Credit Card,2025-03-13,9.0,Hyderabad,Not Returned
+100052,MYN1051,American Tourister Backpacks Casual,Bags,Backpacks,American Tourister,589,20,471.2,3.1,4850.0,Free Size,Olive,True,Net Banking,2025-05-06,3.0,Mumbai,Not Returned
+100096,MYN1095,Being Human Sweatshirts Classic,Topwear,Sweatshirts,Being Human,1583,10,1424.7,3.0,3121.0,XXL,Beige,False,UPI,2025-07-18,2.0,Pune,Exchanged
+100209,MYN1208,Being Human Hoodies Sport,Topwear,Hoodies,Being Human,1710,60,684.0,3.1,4584.0,S,White,False,Debit Card,2025-02-28,7.0,Ahmedabad,Not Returned
+100248,MYN1247,Roadster Sweatshirts Everyday,Topwear,Sweatshirts,Roadster,2186,40,1311.6,3.9,3675.0,S,Olive,False,Debit Card,2025-04-08,9.0,Bangalore,Not Returned
+100042,MYN1041,Fastrack Sling Bags Casual,Bags,Sling Bags,Fastrack,1939,10,1745.1,2.7,3374.0,Free Size,Navy Blue,False,UPI,2025-05-10,6.0,Mumbai,Not Returned
+100090,MYN1089,Noise Bluetooth Speakers Everyday,Electronics,Bluetooth Speakers,Noise,3242,30,2269.4,,,Free Size,Black,False,Cash on Delivery,2025-07-09,,Chennai,Not Returned
+100245,MYN1244,American Tourister Sling Bags Everyday,Bags,Sling Bags,American Tourister,3383,0,3383.0,4.3,1090.0,Free Size,Red,True,Debit Card,2025-06-17,9.0,Chennai,Not Returned
+100137,MYN1136,Levis Shorts Sport,Bottomwear,Shorts,Levis,620,40,372.0,3.6,763.0,XXL,Beige,True,UPI,2025-06-29,6.0,Chennai,Not Returned
+100027,MYN1026,H&M Mufflers Sport,Winterwear,Mufflers,H&M,1357,30,949.9,4.4,17.0,XXL,Black,False,Net Banking,2025-06-21,5.0,Mumbai,Not Returned
+100294,MYN1293,Wrangler Shorts Edition,Bottomwear,Shorts,Wrangler,651,30,455.7,2.9,1036.0,L,Pink,True,Credit Card,2025-04-29,8.0,Mumbai,Not Returned
+100142,MYN1141,Puma Sandals Classic,Footwear,Sandals,Puma,4379,0,4379.0,4.5,693.0,9,Beige,False,Cash on Delivery,2025-01-24,5.0,Kolkata,Not Returned
+100201,MYN1200,American Tourister Backpacks Everyday,Bags,Backpacks,American Tourister,1242,50,621.0,3.5,2445.0,Free Size,Red,False,Net Banking,2025-04-23,2.0,Kolkata,Not Returned
+100001,MYN1000,boAt Ear Phones Everyday,Electronics,Ear Phones,boAt,4571,20,3656.8,2.7,3445.0,Free Size,Grey,True,UPI,2025-04-10,9.0,Jaipur,Not Returned
+100269,MYN1268,Skybags Duffel Bags Casual,Bags,Duffel Bags,Skybags,2180,30,1526.0,4.7,3260.0,Free Size,Olive,True,Cash on Delivery,2025-04-18,3.0,Hyderabad,Not Returned
+100273,MYN1272,Bata Sports Shoes Casual,Footwear,Sports Shoes,Bata,3371,40,2022.6,2.9,1400.0,6,Olive,True,UPI,2025-03-29,4.0,Delhi,Not Returned
+100101,MYN1100,Roadster Jeans Everyday,Bottomwear,Jeans,Roadster,2457,0,2457.0,2.8,3311.0,S,White,False,Cash on Delivery,2025-03-08,4.0,Jaipur,Not Returned
+100260,MYN1259,HRX Joggers Classic,Bottomwear,Joggers,HRX,2054,50,1027.0,2.6,1160.0,S,Grey,False,Net Banking,2025-02-12,,Delhi,Not Returned
+100256,MYN1255,boAt Bluetooth Speakers Edition,Electronics,Bluetooth Speakers,boAt,4458,40,2674.8,4.0,2074.0,Free Size,Grey,True,Credit Card,2025-02-21,6.0,Kolkata,Not Returned
+100172,MYN1171,Roadster Trousers Everyday,Bottomwear,Trousers,Roadster,1776,30,1243.2,4.4,2546.0,L,Maroon,False,Net Banking,2025-04-18,4.0,Hyderabad,Not Returned
+100099,MYN1098,Puma Sunglasses Pro,Accessories,Sunglasses,Puma,2460,40,1476.0,2.8,3336.0,Free Size,Grey,False,Credit Card,2025-06-06,8.0,,Returned
+100037,MYN1036,Ray-Ban Sunglasses Casual,Accessories,Sunglasses,Ray-Ban,858,60,343.2,,,Free Size,Olive,False,Debit Card,2025-05-09,9.0,Mumbai,Not Returned
+100062,MYN1061,H&M Sweaters Pro,Winterwear,Sweaters,H&M,2780,20,2224.0,2.8,250.0,L,Black,False,Net Banking,2025-06-11,7.0,Delhi,Not Returned
+100151,MYN1150,Skybags Backpacks Sport,Bags,Backpacks,Skybags,3455,20,2764.0,3.7,4781.0,Free Size,Maroon,False,Credit Card,2025-05-16,6.0,Mumbai,Not Returned
+100237,MYN1236,Woodland Mufflers Sport,Winterwear,Mufflers,Woodland,3347,20,2677.6,2.7,4403.0,XL,White,False,Credit Card,2025-01-11,9.0,Delhi,Not Returned
+100203,MYN1202,Wildcraft Sling Bags Sport,Bags,Sling Bags,Wildcraft,3348,30,2343.6,,,Free Size,White,False,UPI,2025-03-20,2.0,Kolkata,Not Returned
+100243,MYN1242,Woodland Sweaters Pro,Winterwear,Sweaters,Woodland,2086,30,1460.2,3.4,1155.0,M,Maroon,False,Debit Card,2025-03-17,5.0,Chennai,Not Returned
+100012,MYN1011,Ray-Ban Watches Everyday,Accessories,Watches,Ray-Ban,2222,10,1999.8,3.5,3243.0,Free Size,Grey,True,Debit Card,2025-01-29,5.0,Jaipur,Exchanged
+100297,MYN1296,HRX Hoodies Classic,Topwear,Hoodies,HRX,1031,40,618.6,4.7,2189.0,XL,Grey,False,Credit Card,2025-03-24,2.0,Hyderabad,Not Returned
+100268,MYN1267,Skybags Laptop Bags Casual,Bags,Laptop Bags,Skybags,1879,10,1691.1,3.7,1432.0,Free Size,White,True,Credit Card,2025-02-07,5.0,Ahmedabad,Not Returned
+100028,MYN1027,Bata Sneakers Sport,Footwear,Sneakers,Bata,3204,30,2242.8,3.9,700.0,8,Pink,True,Debit Card,2025-04-26,8.0,Hyderabad,Not Returned
+100220,MYN1219,Skybags Laptop Bags Everyday,Bags,Laptop Bags,Skybags,904,40,542.4,4.3,2975.0,Free Size,Maroon,False,Credit Card,2025-04-10,9.0,Hyderabad,Not Returned
+100005,MYN1004,Roadster T-Shirts Everyday,Topwear,T-Shirts,Roadster,1762,50,881.0,2.9,3153.0,L,White,True,UPI,2025-06-13,3.0,Lucknow,Not Returned
+100123,MYN1122,Roadster Jackets Sport,Winterwear,Jackets,Roadster,1130,0,1130.0,5.0,2633.0,S,Grey,False,Cash on Delivery,2025-05-23,2.0,Jaipur,Not Returned
+100033,MYN1032,Noise Bluetooth Speakers Edition,Electronics,Bluetooth Speakers,Noise,1947,30,1362.9,2.6,1716.0,Free Size,White,False,UPI,2025-06-19,7.0,Pune,Returned
+100205,MYN1204,Wildcraft Backpacks Sport,Bags,Backpacks,Wildcraft,2823,20,2258.4,3.4,4495.0,Free Size,Blue,False,UPI,2025-05-15,4.0,Kolkata,Returned
+100163,MYN1162,Wrangler Jeans Classic,Bottomwear,Jeans,Wrangler,796,0,796.0,2.9,2741.0,M,Olive,False,Debit Card,2025-02-12,7.0,Jaipur,Not Returned
+100210,MYN1209,Roadster Jackets Pro,Winterwear,Jackets,Roadster,2868,50,1434.0,4.7,2545.0,XL,White,False,Credit Card,2025-01-12,2.0,Ahmedabad,Not Returned
+100286,MYN1285,Campus Sandals Classic,Footwear,Sandals,Campus,1020,30,714.0,4.5,3753.0,7,White,False,Debit Card,2025-06-01,4.0,Delhi,Not Returned
+100139,MYN1138,Adidas Sandals Everyday,Footwear,Sandals,Adidas,2999,0,2999.0,4.2,3094.0,6,Pink,False,Debit Card,2025-07-22,4.0,Chennai,Returned
+100063,MYN1062,Realme Ear Phones Classic,Electronics,Ear Phones,Realme,1034,0,1034.0,4.5,4720.0,Free Size,Pink,False,Cash on Delivery,2025-02-16,8.0,Chennai,Not Returned
+100136,MYN1135,Fastrack Belts Classic,Accessories,Belts,Fastrack,576,0,576.0,3.3,1041.0,Free Size,Maroon,False,Net Banking,2025-01-12,,Jaipur,Not Returned
+100129,MYN1128,WROGN Sunglasses Classic,Accessories,Sunglasses,WROGN,1253,0,1253.0,4.2,914.0,Free Size,Grey,False,Net Banking,2025-07-17,6.0,Lucknow,Not Returned
+100291,MYN1290,HRX Trousers Pro,Bottomwear,Trousers,HRX,760,40,456.0,,,XL,Pink,False,Cash on Delivery,2025-06-08,5.0,,Not Returned
+100009,MYN1008,Skybags Duffel Bags Pro,Bags,Duffel Bags,Skybags,2777,50,1388.5,3.6,3105.0,Free Size,Navy Blue,False,Cash on Delivery,2025-02-17,8.0,Delhi,Not Returned
+100071,MYN1070,Roadster Mufflers Everyday,Winterwear,Mufflers,Roadster,1337,60,534.8,3.1,4124.0,XXL,Black,True,Cash on Delivery,2025-03-19,9.0,Lucknow,Not Returned
+100265,MYN1264,Roadster Mufflers Edition,Winterwear,Mufflers,Roadster,1634,40,980.4,,,XL,Red,True,Credit Card,2025-03-17,3.0,Pune,Exchanged
+100065,MYN1064,Levis T-Shirts Casual,Topwear,T-Shirts,Levis,2416,20,1932.8,3.8,2129.0,XXL,Grey,False,Cash on Delivery,2025-05-13,6.0,Lucknow,Not Returned
+100045,MYN1044,JBL Ear Phones Casual,Electronics,Ear Phones,JBL,2942,50,1471.0,,,Free Size,Red,True,Debit Card,2025-02-06,5.0,Jaipur,Not Returned
+100280,MYN1279,Titan Caps Sport,Accessories,Caps,Titan,2510,60,1004.0,4.8,267.0,Free Size,Maroon,False,Debit Card,2025-02-23,6.0,Delhi,Not Returned
+100157,MYN1156,Puma Belts Everyday,Accessories,Belts,Puma,3183,10,2864.7,,,Free Size,Blue,False,Debit Card,2025-03-01,6.0,Kolkata,Not Returned
+100041,MYN1040,H&M Sweaters Pro,Winterwear,Sweaters,H&M,1550,30,1085.0,3.5,2428.0,M,Black,True,Credit Card,2025-02-02,2.0,Ahmedabad,Not Returned
+100124,MYN1123,Wrangler Trousers Casual,Bottomwear,Trousers,Wrangler,2833,30,1983.1,5.0,3416.0,XXL,Black,False,Debit Card,2025-01-11,7.0,Mumbai,Not Returned
+100276,MYN1275,HRX Jackets Everyday,Topwear,Jackets,HRX,1922,60,768.8,3.7,1933.0,XXL,Black,False,Debit Card,2025-06-11,6.0,Lucknow,Not Returned
+100217,MYN1216,American Tourister Sling Bags Edition,Bags,Sling Bags,American Tourister,1542,10,1387.8,4.2,4918.0,Free Size,Maroon,True,UPI,2025-04-13,6.0,Hyderabad,Not Returned
+100154,MYN1153,Sparx Sneakers Pro,Footwear,Sneakers,Sparx,3070,30,2149.0,3.9,4704.0,7,Olive,False,Credit Card,2025-04-15,5.0,Jaipur,Returned
+100024,MYN1023,Puma Sunglasses Sport,Accessories,Sunglasses,Puma,3168,10,2851.2,,,Free Size,White,False,Net Banking,2025-06-10,5.0,Chennai,Not Returned
+100262,MYN1261,Flying Machine Jeans Everyday,Bottomwear,Jeans,Flying Machine,1151,50,575.5,3.7,1518.0,M,Grey,False,UPI,2025-05-27,4.0,Mumbai,Returned
+100111,MYN1110,Fastrack Duffel Bags Edition,Bags,Duffel Bags,Fastrack,3353,30,2347.1,4.2,4854.0,Free Size,Red,False,Debit Card,2025-05-30,6.0,Ahmedabad,Returned
+100082,MYN1081,boAt Ear Phones Casual,Electronics,Ear Phones,boAt,4826,20,3860.8,4.8,3531.0,Free Size,Red,False,Net Banking,2025-05-17,3.0,Mumbai,Returned
+100208,MYN1207,Noise Ear Phones Classic,Electronics,Ear Phones,Noise,1168,40,700.8,3.2,770.0,Free Size,Beige,False,Debit Card,2025-04-28,6.0,Mumbai,Returned
+100213,MYN1212,American Tourister Duffel Bags Everyday,Bags,Duffel Bags,American Tourister,3242,30,2269.4,4.2,1305.0,Free Size,Beige,True,Net Banking,2025-05-08,6.0,Pune,Not Returned
+100040,MYN1039,American Tourister Duffel Bags Sport,Bags,Duffel Bags,American Tourister,855,30,598.5,3.8,4612.0,Free Size,Navy Blue,False,UPI,2025-01-16,9.0,Ahmedabad,Returned
+100241,MYN1240,Woodland Sweaters Casual,Winterwear,Sweaters,Woodland,1368,30,957.6,2.9,1126.0,L,Beige,False,Cash on Delivery,2025-02-28,8.0,Mumbai,Not Returned
+100292,MYN1291,Woodland Mufflers Pro,Winterwear,Mufflers,Woodland,3479,30,2435.3,,,M,Navy Blue,False,Debit Card,2025-02-08,2.0,Lucknow,Not Returned
+100259,MYN1258,Ray-Ban Watches Everyday,Accessories,Watches,Ray-Ban,1789,60,715.6,3.3,2801.0,Free Size,White,False,Cash on Delivery,2025-04-09,9.0,Delhi,Not Returned
+100200,MYN1199,HRX Trousers Edition,Bottomwear,Trousers,HRX,1095,50,547.5,2.7,2558.0,XL,Maroon,True,Cash on Delivery,2025-07-15,3.0,Chennai,Not Returned
+100015,MYN1014,Ray-Ban Sunglasses Casual,Accessories,Sunglasses,Ray-Ban,3729,30,2610.3,3.7,4780.0,Free Size,Olive,False,Net Banking,2025-06-01,8.0,Pune,Not Returned
+100048,MYN1047,HRX Mufflers Casual,Winterwear,Mufflers,HRX,2855,60,1142.0,4.9,3295.0,XL,Maroon,True,Cash on Delivery,2025-05-02,6.0,Kolkata,Returned
+100095,MYN1094,Puma Sneakers Casual,Footwear,Sneakers,Puma,1953,30,1367.1,,,7,Blue,True,Cash on Delivery,2025-07-17,6.0,Jaipur,Not Returned
+100264,MYN1263,Wrangler Track Pants Pro,Bottomwear,Track Pants,Wrangler,1457,0,1457.0,4.0,4034.0,XXL,Grey,True,UPI,2025-03-09,7.0,Delhi,Not Returned
+100228,MYN1227,Bata Sports Shoes Pro,Footwear,Sports Shoes,Bata,4290,20,3432.0,4.4,841.0,10,Navy Blue,False,Net Banking,2025-02-14,5.0,Lucknow,Not Returned
+100274,MYN1273,Woodland Mufflers Casual,Winterwear,Mufflers,Woodland,2540,20,2032.0,,,XL,Navy Blue,False,Credit Card,2025-05-05,8.0,Hyderabad,Returned
+100202,MYN1201,Levis Sweatshirts Pro,Topwear,Sweatshirts,Levis,415,20,332.0,4.8,4096.0,L,Red,False,Cash on Delivery,2025-07-07,9.0,Chennai,Not Returned
+100162,MYN1161,Flying Machine Shorts Everyday,Bottomwear,Shorts,Flying Machine,2341,0,2341.0,5.0,969.0,L,Blue,True,UPI,2025-02-06,5.0,Hyderabad,Not Returned
+100044,MYN1043,Fastrack Duffel Bags Pro,Bags,Duffel Bags,Fastrack,2015,50,1007.5,3.2,3466.0,Free Size,Maroon,False,Debit Card,2025-04-11,2.0,Hyderabad,Not Returned
+100218,MYN1217,Puma Sandals Pro,Footwear,Sandals,Puma,3248,30,2273.6,3.7,4622.0,9,Pink,False,Credit Card,2025-01-03,9.0,Bangalore,Exchanged
+100146,MYN1145,Fastrack Belts Pro,Accessories,Belts,Fastrack,2747,0,2747.0,,,Free Size,Olive,False,Cash on Delivery,2025-02-23,7.0,Delhi,Not Returned
+100191,MYN1190,Roadster T-Shirts Everyday,Topwear,T-Shirts,Roadster,528,30,369.6,3.3,95.0,S,Grey,True,UPI,2025-01-14,2.0,Delhi,Not Returned
+100221,MYN1220,Adidas Slippers Sport,Footwear,Slippers,Adidas,3065,0,3065.0,3.1,2811.0,7,Blue,True,Cash on Delivery,2025-02-16,4.0,Pune,Not Returned
+100252,MYN1251,H&M Sweatshirts Everyday,Topwear,Sweatshirts,H&M,684,50,342.0,,,M,Maroon,False,UPI,2025-02-22,4.0,Ahmedabad,Returned
+100004,MYN1003,Wrangler Jeans Sport,Bottomwear,Jeans,Wrangler,2127,0,2127.0,4.9,2062.0,XL,White,False,Debit Card,2025-01-09,3.0,Ahmedabad,Not Returned
+100106,MYN1105,Roadster Trousers Everyday,Bottomwear,Trousers,Roadster,2705,40,1623.0,4.2,1305.0,S,White,True,UPI,2025-04-13,2.0,Chennai,Not Returned
+100054,MYN1053,Roadster Mufflers Sport,Winterwear,Mufflers,Roadster,1383,60,553.2,2.6,4176.0,L,Blue,False,Debit Card,2025-04-28,6.0,,Not Returned
+100134,MYN1133,HRX Sweaters Classic,Winterwear,Sweaters,HRX,1946,0,1946.0,3.3,2065.0,XL,Navy Blue,False,Cash on Delivery,2025-04-14,8.0,Delhi,Not Returned
+100002,MYN1001,Adidas Sneakers Pro,Footwear,Sneakers,Adidas,4734,60,1893.6,4.0,3386.0,6,Blue,True,Net Banking,2025-01-22,6.0,Lucknow,Returned
+100132,MYN1131,H&M Sweaters Casual,Winterwear,Sweaters,H&M,1892,10,1702.8,4.2,4796.0,M,Beige,True,Credit Card,2025-01-07,6.0,Chennai,Not Returned
+100104,MYN1103,Realme Smart Watches Sport,Electronics,Smart Watches,Realme,1312,50,656.0,3.4,4842.0,Free Size,Maroon,False,Net Banking,2025-05-10,4.0,Mumbai,Not Returned
+100050,MYN1049,Campus Sandals Edition,Footwear,Sandals,Campus,2675,0,2675.0,2.7,2387.0,8,Olive,False,Debit Card,2025-05-16,9.0,Kolkata,Not Returned
+100081,MYN1080,Ray-Ban Caps Classic,Accessories,Caps,Ray-Ban,2359,20,1887.2,4.2,2833.0,Free Size,Maroon,True,Net Banking,2025-01-09,4.0,Delhi,Not Returned
+100206,MYN1205,Sparx Sneakers Pro,Footwear,Sneakers,Sparx,3586,20,2868.8,2.6,3292.0,10,Blue,False,Debit Card,2025-03-22,8.0,Kolkata,Exchanged
+100035,MYN1034,JBL Bluetooth Speakers Classic,Electronics,Bluetooth Speakers,JBL,2492,40,1495.2,,,Free Size,Red,True,Net Banking,2025-03-04,4.0,Hyderabad,Not Returned
+100092,MYN1091,Skybags Laptop Bags Classic,Bags,Laptop Bags,Skybags,1512,10,1360.8,3.1,3418.0,Free Size,White,True,Credit Card,2025-04-20,5.0,Kolkata,Returned
+100053,MYN1052,Flying Machine Jeans Classic,Bottomwear,Jeans,Flying Machine,1427,30,998.9,4.9,1215.0,XXL,Beige,False,Credit Card,2025-04-23,2.0,Pune,Not Returned
+100242,MYN1241,Realme Smart Watches Casual,Electronics,Smart Watches,Realme,4663,50,2331.5,2.7,227.0,Free Size,Black,False,UPI,2025-07-08,5.0,Lucknow,Not Returned
+100014,MYN1013,American Tourister Backpacks Pro,Bags,Backpacks,American Tourister,2480,10,2232.0,3.4,2238.0,Free Size,Blue,True,Debit Card,2025-05-09,2.0,Ahmedabad,Not Returned
+100089,MYN1088,boAt Bluetooth Speakers Sport,Electronics,Bluetooth Speakers,boAt,2915,10,2623.5,4.8,2598.0,Free Size,Red,True,Net Banking,2025-05-14,9.0,Pune,Not Returned
+100167,MYN1166,Levis Shorts Edition,Bottomwear,Shorts,Levis,2598,30,1818.6,3.4,4034.0,S,Beige,False,Debit Card,2025-07-11,7.0,Delhi,Not Returned
+100295,MYN1294,Puma Belts Pro,Accessories,Belts,Puma,3219,30,2253.3,2.6,3168.0,Free Size,Beige,False,Cash on Delivery,2025-02-07,2.0,Lucknow,Not Returned
+100135,MYN1134,Levis Hoodies Everyday,Topwear,Hoodies,Levis,1098,10,988.2,4.4,4682.0,XL,White,False,Credit Card,2025-03-04,5.0,Delhi,Not Returned
+100288,MYN1287,HRX Mufflers Pro,Winterwear,Mufflers,HRX,2466,60,986.4,4.6,201.0,S,Red,True,Debit Card,2025-05-07,2.0,Mumbai,Not Returned
+100244,MYN1243,H&M Jackets Everyday,Winterwear,Jackets,H&M,2397,10,2157.3,3.4,4434.0,S,White,False,Cash on Delivery,2025-02-27,,Bangalore,Not Returned
+100055,MYN1054,Fastrack Backpacks Edition,Bags,Backpacks,Fastrack,1749,30,1224.3,4.2,3487.0,Free Size,Maroon,False,Credit Card,2025-01-01,6.0,Jaipur,Not Returned
+100051,MYN1050,Nike Slippers Edition,Footwear,Slippers,Nike,2387,30,1670.9,3.4,3487.0,6,Black,True,Credit Card,2025-01-19,6.0,Delhi,Not Returned
+100175,MYN1174,Adidas Slippers Everyday,Footwear,Slippers,Adidas,2680,30,1876.0,4.3,2360.0,6,Beige,False,Cash on Delivery,2025-06-19,6.0,,Not Returned
+100190,MYN1189,Puma Sneakers Casual,Footwear,Sneakers,Puma,1559,40,935.4,2.9,73.0,10,Beige,False,Cash on Delivery,2025-05-23,6.0,Pune,Not Returned
+100299,MYN1298,Fastrack Belts Casual,Accessories,Belts,Fastrack,2107,60,842.8,3.2,1317.0,Free Size,Pink,False,Net Banking,2025-02-11,2.0,Mumbai,Not Returned
+100188,MYN1187,Nike Formal Shoes Edition,Footwear,Formal Shoes,Nike,3784,0,3784.0,4.8,2497.0,7,Beige,False,Cash on Delivery,2025-03-16,4.0,Kolkata,Not Returned
+100170,MYN1169,WROGN Caps Everyday,Accessories,Caps,WROGN,3435,30,2404.5,3.5,1441.0,Free Size,Navy Blue,False,Credit Card,2025-02-18,9.0,Lucknow,Not Returned
+100059,MYN1058,Wildcraft Duffel Bags Classic,Bags,Duffel Bags,Wildcraft,1375,40,825.0,3.7,4949.0,Free Size,Beige,False,Credit Card,2025-01-26,8.0,Ahmedabad,Not Returned
+100049,MYN1048,Levis Jackets Classic,Topwear,Jackets,Levis,1637,40,982.2,4.6,3325.0,XXL,Pink,False,UPI,2025-01-07,7.0,Kolkata,Not Returned
+100236,MYN1235,Woodland Jackets Sport,Winterwear,Jackets,Woodland,1579,0,1579.0,2.7,3971.0,XXL,White,False,Net Banking,2025-07-19,5.0,Chennai,Not Returned
+100253,MYN1252,Puma Sandals Pro,Footwear,Sandals,Puma,4047,10,3642.3,2.7,2525.0,10,Beige,False,Net Banking,2025-03-03,2.0,Lucknow,Not Returned
+100022,MYN1021,HRX Shirts Classic,Topwear,Shirts,HRX,2455,50,1227.5,4.4,3992.0,XXL,Black,False,Debit Card,2025-04-26,4.0,Ahmedabad,Returned
+100161,MYN1160,Fastrack Laptop Bags Classic,Bags,Laptop Bags,Fastrack,3233,50,1616.5,,,Free Size,Beige,False,Cash on Delivery,2025-02-13,9.0,Pune,Not Returned
+100277,MYN1276,HRX Shorts Pro,Bottomwear,Shorts,HRX,2001,40,1200.6,,,XXL,Grey,True,Debit Card,2025-03-26,7.0,Lucknow,Not Returned
+100192,MYN1191,HRX Sweaters Everyday,Winterwear,Sweaters,HRX,3229,20,2583.2,,,XL,Grey,False,Credit Card,2025-01-25,6.0,Delhi,Exchanged
+100258,MYN1257,Titan Wallets Edition,Accessories,Wallets,Titan,3297,20,2637.6,4.7,3794.0,Free Size,Red,False,UPI,2025-05-25,6.0,Delhi,Not Returned
+100150,MYN1149,Ray-Ban Caps Edition,Accessories,Caps,Ray-Ban,506,30,354.2,4.1,4905.0,Free Size,Navy Blue,False,Net Banking,2025-07-07,3.0,Pune,Not Returned
+100131,MYN1130,HRX Sweaters Edition,Winterwear,Sweaters,HRX,1984,30,1388.8,,,XL,Olive,False,UPI,2025-03-21,9.0,Jaipur,Not Returned
+100152,MYN1151,Realme Bluetooth Speakers Sport,Electronics,Bluetooth Speakers,Realme,2788,20,2230.4,3.9,1083.0,Free Size,Beige,False,UPI,2025-05-11,5.0,Chennai,Not Returned
+100100,MYN1099,Levis Hoodies Edition,Topwear,Hoodies,Levis,1198,60,479.2,4.6,3463.0,S,Black,True,UPI,2025-04-03,9.0,Pune,Not Returned
+100088,MYN1087,American Tourister Backpacks Casual,Bags,Backpacks,American Tourister,2774,20,2219.2,4.4,95.0,Free Size,Pink,False,Debit Card,2025-04-25,,Kolkata,Not Returned
+100215,MYN1214,Nike Sports Shoes Pro,Footwear,Sports Shoes,Nike,4561,40,2736.6,3.9,2282.0,10,Blue,False,Cash on Delivery,2025-03-31,3.0,Mumbai,Not Returned
+100122,MYN1121,Fastrack Backpacks Sport,Bags,Backpacks,Fastrack,3472,40,2083.2,3.1,2051.0,Free Size,Olive,False,Cash on Delivery,2025-06-22,7.0,Delhi,Returned
+100300,MYN1299,Sparx Sandals Edition,Footwear,Sandals,Sparx,2123,30,1486.1,2.8,227.0,8,Beige,False,Cash on Delivery,2025-04-15,5.0,Lucknow,Not Returned
+100021,MYN1020,Campus Sports Shoes Classic,Footwear,Sports Shoes,Campus,2968,30,2077.6,3.2,3724.0,8,Maroon,False,Cash on Delivery,2025-07-16,6.0,Jaipur,Not Returned
+100189,MYN1188,Noise Bluetooth Speakers Everyday,Electronics,Bluetooth Speakers,Noise,2241,30,1568.7,5.0,244.0,Free Size,White,True,Net Banking,2025-01-12,8.0,Bangalore,Not Returned
+100072,MYN1071,WROGN Belts Classic,Accessories,Belts,WROGN,1634,40,980.4,4.6,1532.0,Free Size,Beige,False,Debit Card,2025-01-18,3.0,Bangalore,Not Returned
+100107,MYN1106,Puma Caps Edition,Accessories,Caps,Puma,740,20,592.0,2.5,2176.0,Free Size,Beige,False,Cash on Delivery,2025-03-26,3.0,Delhi,Not Returned
+100271,MYN1270,Puma Sandals Pro,Footwear,Sandals,Puma,2634,10,2370.6,,,9,Maroon,False,Net Banking,2025-02-25,2.0,Lucknow,Not Returned
+100103,MYN1102,Bata Formal Shoes Casual,Footwear,Formal Shoes,Bata,1821,50,910.5,,,6,Olive,False,Credit Card,2025-04-22,6.0,Hyderabad,Not Returned
