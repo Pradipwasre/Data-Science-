@@ -690,3 +690,46 @@ ANSWER:
 -- ============================================================================
 -- END OF DAY 3 NOTEBOOK - KEEP PRACTICING!
 -- ============================================================================
+
+
+CREATE TABLE orders (
+    order_id      NUMBER(10) PRIMARY KEY,
+    customer_name VARCHAR(100) NOT NULL,
+    product_id    NUMBER(10)   NOT NULL,
+    quantity      NUMBER(5)    NOT NULL,
+    order_date    DATE         NOT NULL,
+    city          VARCHAR(50)  NOT NULL,
+    order_status  VARCHAR(20)  NOT NULL,
+    price         NUMBER(10,2) NOT NULL
+);
+
+INSERT INTO orders VALUES (1, 'Amit', 101, 2, DATE '2025-03-04', 'Pune', 'Delivered', 499.00);
+INSERT INTO orders VALUES (2, 'Sneha', 102, 1, DATE '2025-03-05', 'Mumbai', 'Pending', 1299.00);
+INSERT INTO orders VALUES (3, 'Ravi', 103, 3, DATE '2025-03-06', 'Delhi', 'Delivered', 299.00);
+INSERT INTO orders VALUES (4, 'Priya', 104, 5, DATE '2025-03-07', 'Pune', 'Cancelled', 199.00);
+INSERT INTO orders VALUES (5, 'Karan', 105, 2, DATE '2025-03-08', 'Hyderabad', 'Delivered', 799.00);
+INSERT INTO orders VALUES (6, 'Meera', 106, 4, DATE '2025-03-09', 'Chennai', 'Delivered', 349.00);
+INSERT INTO orders VALUES (7, 'Arjun', 107, 1, DATE '2025-03-10', 'Pune', 'Pending', 999.00);
+INSERT INTO orders VALUES (8, 'Neha', 108, 2, DATE '2025-03-11', 'Delhi', 'Delivered', 459.00);
+INSERT INTO orders VALUES (9, 'Suresh', 109, 3, DATE '2025-03-12', 'Mumbai', 'Delivered', 699.00);
+INSERT INTO orders VALUES (10, 'Anita', 110, 1, DATE '2025-03-13', 'Hyderabad', 'Cancelled', 129.00);
+INSERT INTO orders VALUES (11, 'Vikas', 111, 2, DATE '2025-03-14', 'Chennai', 'Delivered', 599.00);
+INSERT INTO orders VALUES (12, 'Pooja', 112, 4, DATE '2025-03-15', 'Delhi', 'Pending', 899.00);
+INSERT INTO orders VALUES (13, 'Rahul', 113, 2, DATE '2025-03-16', 'Pune', 'Delivered', 399.00);
+INSERT INTO orders VALUES (14, 'Divya', 114, 1, DATE '2025-03-17', 'Mumbai', 'Delivered', 1499.00);
+INSERT INTO orders VALUES (15, 'Sanjay', 115, 5, DATE '2025-03-18', 'Hyderabad', 'Delivered', 249.00);
+INSERT INTO orders VALUES (16, 'Kavita', 116, 3, DATE '2025-03-19', 'Chennai', 'Pending', 799.00);
+INSERT INTO orders VALUES (17, 'Manoj', 117, 2, DATE '2025-03-20', 'Delhi', 'Delivered', 349.00);
+INSERT INTO orders VALUES (18, 'Rina', 118, 1, DATE '2025-03-21', 'Pune', 'Cancelled', 1299.00);
+INSERT INTO orders VALUES (19, 'Ashok', 119, 4, DATE '2025-03-22', 'Mumbai', 'Delivered', 499.00);
+INSERT INTO orders VALUES (20, 'Geeta', 120, 2, DATE '2025-03-23', 'Hyderabad', 'Delivered', 699.00);
+INSERT INTO orders VALUES (21, 'Nikhil', 121, 3, DATE '2025-03-24', 'Chennai', 'Delivered', 899.00);
+INSERT INTO orders VALUES (22, 'Shweta', 122, 1, DATE '2025-03-25', 'Delhi', 'Pending', 399.00);
+INSERT INTO orders VALUES (23, 'Ramesh', 123, 2, DATE '2025-03-26', 'Pune', 'Delivered', 599.00);
+INSERT INTO orders VALUES (24, 'Anjali', 124, 4, DATE '2025-03-27', 'Mumbai', 'Delivered', 799.00);
+INSERT INTO orders VALUES (25, 'Deepak', 125, 2, DATE '2025-03-28', 'Hyderabad', 'Cancelled', 299.00);
+INSERT INTO orders VALUES (26, 'Sunita', 126, 3, DATE '2025-03-29', 'Chennai', 'Delivered', 999.00);
+INSERT INTO orders VALUES (27, 'Vivek', 127, 1, DATE '2025-03-30', 'Delhi', 'Delivered', 129.00);
+INSERT INTO orders VALUES (28, 'Payal', 128, 2, DATE '2025-03-31', 'Pune', 'Pending', 499.00);
+INSERT INTO orders VALUES (29, 'Ajay', 129, 3, DATE '2025-04-01', 'Mumbai', 'Delivered', 699.00);
+INSERT INTO orders VALUES (30, 'Leena', 130, 2, DATE '2025-04-02', 'Hyderabad', 'Delivered', 899.00);
