@@ -1,88 +1,242 @@
-CREATE OR REPLACE DATABASE SQL_LEARNING_DB;
+-- ============================================================
+-- SNOWFLAKE FINANCIAL DATA WAREHOUSE SETUP
+-- For Data Engineering & Financial Analysis Project
+-- ============================================================
 
-USE DATABASE SQL_LEARNING_DB;
+-- -----------------------------------------------------------
+-- STEP 1: CREATE WAREHOUSE (Compute Resource)
+-- -----------------------------------------------------------
+-- Warehouse is the compute engine that processes queries
+CREATE WAREHOUSE IF NOT EXISTS FINANCE_WH
+    WITH
+    WAREHOUSE_SIZE = 'SMALL'
+    WAREHOUSE_TYPE = 'STANDARD'
+    AUTO_SUSPEND = 300           -- Auto-suspend after 5 min idle
+    AUTO_RESUME = TRUE
+    INITIALLY_SUSPENDED = TRUE;
 
-CREATE OR REPLACE SCHEMA PRACTICE;
+-- Use the warehouse
+USE WAREHOUSE FINANCE_WH;
 
-USE SCHEMA PRACTICE;
+-- -----------------------------------------------------------
+-- STEP 2: CREATE DATABASE
+-- -----------------------------------------------------------
+-- Database is the top-level container for all data objects
+CREATE DATABASE IF NOT EXISTS FINANCIAL_DB;
 
+-- Use the database
+USE DATABASE FINANCIAL_DB;
 
-CREATE OR REPLACE TABLE CUSTOMERS (
-    CUSTOMER_ID NUMBER,
-    FIRST_NAME VARCHAR(50),
-    LAST_NAME VARCHAR(50),
-    CITY VARCHAR(50),
-    STATE VARCHAR(50),
-    AGE NUMBER,
-    GENDER VARCHAR(10),
-    CUSTOMER_TYPE VARCHAR(20),
-    SIGNUP_DATE DATE,
-    IS_ACTIVE BOOLEAN
+-- -----------------------------------------------------------
+-- STEP 3: CREATE SCHEMAS
+-- -----------------------------------------------------------
+-- Schema is a logical grouping of database objects
+-- RAW: For raw ingested data
+-- ANALYTICS: For cleaned and transformed data
+-- REPORTING: For aggregated reporting tables
+
+CREATE SCHEMA IF NOT EXISTS FINANCIAL_DB.RAW;
+CREATE SCHEMA IF NOT EXISTS FINANCIAL_DB.ANALYTICS;
+CREATE SCHEMA IF NOT EXISTS FINANCIAL_DB.REPORTING;
+
+-- -----------------------------------------------------------
+-- STEP 4: CREATE TABLES WITH REALISTIC FINANCIAL DATA
+-- -----------------------------------------------------------
+
+-- 4.1: CUSTOMERS TABLE
+-- Contains customer demographic and account information
+USE SCHEMA FINANCIAL_DB.RAW;
+
+CREATE TABLE IF NOT EXISTS CUSTOMERS (
+    CUSTOMER_ID         NUMBER PRIMARY KEY,
+    FIRST_NAME          VARCHAR(50),
+    LAST_NAME           VARCHAR(50),
+    EMAIL               VARCHAR(100),
+    PHONE               VARCHAR(20),
+    DATE_OF_BIRTH       DATE,
+    GENDER              VARCHAR(10),
+    MARITAL_STATUS      VARCHAR(20),
+    OCCUPATION          VARCHAR(50),
+    ANNUAL_INCOME       DECIMAL(15,2),
+    CREDIT_SCORE        NUMBER(3),
+    ACCOUNT_OPEN_DATE   DATE,
+    ACCOUNT_STATUS      VARCHAR(20),
+    CITY                VARCHAR(50),
+    STATE               VARCHAR(50),
+    COUNTRY             VARCHAR(50),
+    ZIP_CODE            VARCHAR(10),
+    RISK_CATEGORY       VARCHAR(20),
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 );
 
-INSERT INTO CUSTOMERS
-(CUSTOMER_ID, FIRST_NAME, LAST_NAME, CITY, STATE, AGE, GENDER, CUSTOMER_TYPE, SIGNUP_DATE, IS_ACTIVE)
-VALUES
-(1, 'Aarav', 'Sharma', 'Pune', 'Maharashtra', 24, 'Male', 'Regular', '2024-01-15', TRUE),
-(2, 'Priya', 'Patel', 'Mumbai', 'Maharashtra', 31, 'Female', 'Premium', '2023-11-20', TRUE),
-(3, 'Rohan', 'Mehta', 'Delhi', 'Delhi', 42, 'Male', 'Regular', '2022-05-10', TRUE),
-(4, 'Sneha', 'Joshi', 'Bangalore', 'Karnataka', 27, 'Female', 'Premium', '2024-02-18', TRUE),
-(5, 'Vikram', 'Singh', 'Jaipur', 'Rajasthan', 36, 'Male', 'Regular', '2023-08-12', FALSE),
-(6, 'Ananya', 'Iyer', 'Chennai', 'Tamil Nadu', 22, 'Female', 'Regular', '2024-03-05', TRUE),
-(7, 'Rahul', 'Verma', 'Hyderabad', 'Telangana', 29, 'Male', 'Premium', '2023-12-01', TRUE),
-(8, 'Neha', 'Kapoor', 'Delhi', 'Delhi', 34, 'Female', 'Regular', '2022-09-25', TRUE),
-(9, 'Aditya', 'Nair', 'Kochi', 'Kerala', 45, 'Male', 'Premium', '2021-06-14', FALSE),
-(10, 'Pooja', 'Reddy', 'Hyderabad', 'Telangana', 26, 'Female', 'Regular', '2024-01-30', TRUE),
-(11, 'Karan', 'Malhotra', 'Chandigarh', 'Punjab', 39, 'Male', 'Premium', '2022-03-17', TRUE),
-(12, 'Meera', 'Desai', 'Ahmedabad', 'Gujarat', 30, 'Female', 'Regular', '2023-04-22', TRUE),
-(13, 'Arjun', 'Kumar', 'Pune', 'Maharashtra', 28, 'Male', 'Regular', '2024-02-01', TRUE),
-(14, 'Kavya', 'Rao', 'Bangalore', 'Karnataka', 33, 'Female', 'Premium', '2022-12-11', TRUE),
-(15, 'Siddharth', 'Shah', 'Surat', 'Gujarat', 41, 'Male', 'Regular', '2021-10-09', FALSE),
-(16, 'Ishita', 'Gupta', 'Noida', 'Uttar Pradesh', 25, 'Female', 'Regular', '2024-04-15', TRUE),
-(17, 'Manish', 'Agarwal', 'Kolkata', 'West Bengal', 48, 'Male', 'Premium', '2020-07-19', TRUE),
-(18, 'Riya', 'Bose', 'Kolkata', 'West Bengal', 23, 'Female', 'Regular', '2024-03-28', TRUE),
-(19, 'Nikhil', 'Bansal', 'Gurgaon', 'Haryana', 37, 'Male', 'Premium', '2023-01-16', TRUE),
-(20, 'Simran', 'Kaur', 'Amritsar', 'Punjab', 32, 'Female', 'Regular', '2022-11-05', FALSE),
-(21, 'Yash', 'Chopra', 'Pune', 'Maharashtra', 21, 'Male', 'Regular', '2024-05-10', TRUE),
-(22, 'Divya', 'Menon', 'Chennai', 'Tamil Nadu', 38, 'Female', 'Premium', '2021-09-13', TRUE),
-(23, 'Varun', 'Sethi', 'Delhi', 'Delhi', 44, 'Male', 'Regular', '2022-02-25', TRUE),
-(24, 'Tanvi', 'Kulkarni', 'Nagpur', 'Maharashtra', 29, 'Female', 'Premium', '2023-06-18', TRUE),
-(25, 'Mohit', 'Tiwari', 'Lucknow', 'Uttar Pradesh', 35, 'Male', 'Regular', '2023-10-27', FALSE);
-
-
-
-CREATE OR REPLACE TABLE ORDERS (
-    ORDER_ID NUMBER,
-    CUSTOMER_ID NUMBER,
-    ORDER_DATE DATE,
-    PRODUCT_NAME VARCHAR(100),
-    CATEGORY VARCHAR(50),
-    QUANTITY NUMBER,
-    UNIT_PRICE NUMBER(10,2),
-    ORDER_AMOUNT NUMBER(10,2),
-    PAYMENT_METHOD VARCHAR(30),
-    ORDER_STATUS VARCHAR(30)
+-- 4.2: TRANSACTIONS TABLE
+-- Contains all financial transactions (deposits, withdrawals, transfers)
+CREATE TABLE IF NOT EXISTS TRANSACTIONS (
+    TRANSACTION_ID      NUMBER PRIMARY KEY,
+    CUSTOMER_ID         NUMBER REFERENCES CUSTOMERS(CUSTOMER_ID),
+    TRANSACTION_DATE    DATE,
+    TRANSACTION_TYPE    VARCHAR(30),    -- DEPOSIT, WITHDRAWAL, TRANSFER, PAYMENT, INVESTMENT
+    AMOUNT              DECIMAL(15,2),
+    CURRENCY            VARCHAR(3) DEFAULT 'USD',
+    MERCHANT_NAME       VARCHAR(100),
+    MERCHANT_CATEGORY   VARCHAR(50),    -- RETAIL, FOOD, TRAVEL, TECH, HEALTHCARE, etc.
+    PAYMENT_METHOD      VARCHAR(30),    -- CREDIT_CARD, DEBIT_CARD, BANK_TRANSFER, CASH, UPI
+    ACCOUNT_TYPE        VARCHAR(20),    -- SAVINGS, CHECKING, INVESTMENT, CREDIT
+    BALANCE_AFTER       DECIMAL(15,2),
+    DESCRIPTION         VARCHAR(255),
+    IS_FRAUD            BOOLEAN DEFAULT FALSE,
+    FRAUD_SCORE         DECIMAL(5,2),
+    DEVICE_TYPE         VARCHAR(20),    -- MOBILE, WEB, ATM, BRANCH
+    LOCATION_CITY       VARCHAR(50),
+    LOCATION_COUNTRY    VARCHAR(50),
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 );
 
-INSERT INTO ORDERS
-(ORDER_ID, CUSTOMER_ID, ORDER_DATE, PRODUCT_NAME, CATEGORY, QUANTITY, UNIT_PRICE, ORDER_AMOUNT, PAYMENT_METHOD, ORDER_STATUS)
-VALUES
-(1001, 1, '2024-05-01', 'Laptop', 'Electronics', 1, 75000, 75000, 'Credit Card', 'Delivered'),
+-- 4.3: LOANS TABLE
+-- Contains loan applications and disbursements
+CREATE TABLE IF NOT EXISTS LOANS (
+    LOAN_ID             NUMBER PRIMARY KEY,
+    CUSTOMER_ID         NUMBER REFERENCES CUSTOMERS(CUSTOMER_ID),
+    LOAN_TYPE           VARCHAR(30),    -- PERSONAL, HOME, AUTO, EDUCATION, BUSINESS
+    LOAN_AMOUNT         DECIMAL(15,2),
+    INTEREST_RATE       DECIMAL(5,2),
+    LOAN_TERM_MONTHS    NUMBER,
+    MONTHLY_PAYMENT     DECIMAL(15,2),
+    APPLICATION_DATE    DATE,
+    APPROVAL_DATE       DATE,
+    DISBURSEMENT_DATE   DATE,
+    LOAN_STATUS         VARCHAR(20),    -- PENDING, APPROVED, REJECTED, ACTIVE, CLOSED, DEFAULTED
+    OUTSTANDING_BALANCE DECIMAL(15,2),
+    CREDIT_RATING       VARCHAR(10),    -- AAA, AA, A, BBB, BB, B, CCC
+    COLLATERAL_VALUE    DECIMAL(15,2),
+    PURPOSE             VARCHAR(100),
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
-(1002, 2, '2024-05-03', 'Headphones', 'Electronics', 2, 3500, 7000, 'UPI', 'Delivered'),
+-- 4.4: INVESTMENTS TABLE
+-- Contains investment portfolio data
+CREATE TABLE IF NOT EXISTS INVESTMENTS (
+    INVESTMENT_ID       NUMBER PRIMARY KEY,
+    CUSTOMER_ID         NUMBER REFERENCES CUSTOMERS(CUSTOMER_ID),
+    ASSET_TYPE          VARCHAR(30),    -- STOCKS, BONDS, MUTUAL_FUNDS, ETFs, CRYPTO, REAL_ESTATE
+    ASSET_SYMBOL        VARCHAR(20),
+    ASSET_NAME          VARCHAR(100),
+    PURCHASE_DATE       DATE,
+    PURCHASE_PRICE      DECIMAL(15,4),
+    QUANTITY            DECIMAL(15,4),
+    CURRENT_PRICE       DECIMAL(15,4),
+    MARKET_VALUE        DECIMAL(15,2),
+    DIVIDEND_YIELD      DECIMAL(5,2),
+    SECTOR              VARCHAR(50),    -- TECH, HEALTHCARE, FINANCE, ENERGY, CONSUMER, etc.
+    RISK_LEVEL          VARCHAR(10),    -- LOW, MEDIUM, HIGH
+    INVESTMENT_HORIZON  VARCHAR(20),    -- SHORT_TERM, MEDIUM_TERM, LONG_TERM
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
-(1003, 4, '2024-05-05', 'Office Chair', 'Furniture', 1, 12000, 12000, 'Debit Card', 'Shipped'),
+-- 4.5: MARKET DATA TABLE
+-- Contains daily market indices and stock prices
+CREATE TABLE IF NOT EXISTS MARKET_DATA (
+    MARKET_ID           NUMBER PRIMARY KEY,
+    TRADE_DATE          DATE,
+    SYMBOL              VARCHAR(20),
+    COMPANY_NAME        VARCHAR(100),
+    OPEN_PRICE          DECIMAL(15,4),
+    HIGH_PRICE          DECIMAL(15,4),
+    LOW_PRICE           DECIMAL(15,4),
+    CLOSE_PRICE         DECIMAL(15,4),
+    VOLUME              NUMBER,
+    MARKET_CAP          DECIMAL(20,2),
+    PE_RATIO            DECIMAL(10,2),
+    DIVIDEND_YIELD      DECIMAL(5,2),
+    SECTOR              VARCHAR(50),
+    INDEX_NAME          VARCHAR(30),    -- S&P500, NASDAQ, DOW_JONES, RUSSELL2000
+    VOLATILITY_30D      DECIMAL(10,4),
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
-(1004, 7, '2024-05-07', 'Smartphone', 'Electronics', 1, 55000, 55000, 'Credit Card', 'Delivered'),
+-- -----------------------------------------------------------
+-- STEP 5: CREATE VIEWS FOR ANALYTICS
+-- -----------------------------------------------------------
+USE SCHEMA FINANCIAL_DB.ANALYTICS;
 
-(1005, 8, '2024-05-10', 'Keyboard', 'Accessories', 1, 2500, 2500, 'UPI', 'Cancelled'),
+-- Customer Summary View
+CREATE OR REPLACE VIEW CUSTOMER_SUMMARY AS
+SELECT 
+    c.CUSTOMER_ID,
+    c.FIRST_NAME || ' ' || c.LAST_NAME AS FULL_NAME,
+    c.ANNUAL_INCOME,
+    c.CREDIT_SCORE,
+    c.RISK_CATEGORY,
+    COUNT(DISTINCT t.TRANSACTION_ID) AS TOTAL_TRANSACTIONS,
+    SUM(CASE WHEN t.TRANSACTION_TYPE = 'DEPOSIT' THEN t.AMOUNT ELSE 0 END) AS TOTAL_DEPOSITS,
+    SUM(CASE WHEN t.TRANSACTION_TYPE = 'WITHDRAWAL' THEN t.AMOUNT ELSE 0 END) AS TOTAL_WITHDRAWALS,
+    SUM(CASE WHEN t.TRANSACTION_TYPE = 'PAYMENT' THEN t.AMOUNT ELSE 0 END) AS TOTAL_PAYMENTS,
+    COUNT(DISTINCT l.LOAN_ID) AS TOTAL_LOANS,
+    SUM(l.LOAN_AMOUNT) AS TOTAL_LOAN_AMOUNT,
+    SUM(i.MARKET_VALUE) AS TOTAL_INVESTMENTS,
+    DATEDIFF(YEAR, c.DATE_OF_BIRTH, CURRENT_DATE()) AS AGE
+FROM FINANCIAL_DB.RAW.CUSTOMERS c
+LEFT JOIN FINANCIAL_DB.RAW.TRANSACTIONS t ON c.CUSTOMER_ID = t.CUSTOMER_ID
+LEFT JOIN FINANCIAL_DB.RAW.LOANS l ON c.CUSTOMER_ID = l.CUSTOMER_ID
+LEFT JOIN FINANCIAL_DB.RAW.INVESTMENTS i ON c.CUSTOMER_ID = i.CUSTOMER_ID
+GROUP BY c.CUSTOMER_ID, c.FIRST_NAME, c.LAST_NAME, c.ANNUAL_INCOME, 
+         c.CREDIT_SCORE, c.RISK_CATEGORY, c.DATE_OF_BIRTH;
 
-(1006, 11, '2024-05-12', 'Monitor', 'Electronics', 2, 18000, 36000, 'Net Banking', 'Delivered'),
+-- Monthly Transaction Trends
+CREATE OR REPLACE VIEW MONTHLY_TRANSACTION_TRENDS AS
+SELECT 
+    DATE_TRUNC('MONTH', TRANSACTION_DATE) AS MONTH,
+    TRANSACTION_TYPE,
+    MERCHANT_CATEGORY,
+    COUNT(*) AS TRANSACTION_COUNT,
+    SUM(AMOUNT) AS TOTAL_AMOUNT,
+    AVG(AMOUNT) AS AVG_AMOUNT,
+    STDDEV(AMOUNT) AS STD_AMOUNT
+FROM FINANCIAL_DB.RAW.TRANSACTIONS
+GROUP BY DATE_TRUNC('MONTH', TRANSACTION_DATE), TRANSACTION_TYPE, MERCHANT_CATEGORY;
 
-(1007, 13, '2024-05-15', 'Backpack', 'Accessories', 3, 1800, 5400, 'UPI', 'Pending'),
+-- -----------------------------------------------------------
+-- STEP 6: CREATE REPORTING TABLES
+-- -----------------------------------------------------------
+USE SCHEMA FINANCIAL_DB.REPORTING;
 
-(1008, 14, '2024-05-18', 'Tablet', 'Electronics', 1, 28000, 28000, 'Credit Card', 'Shipped'),
+-- Risk Analysis Report
+CREATE TABLE IF NOT EXISTS RISK_ANALYSIS (
+    REPORT_DATE         DATE,
+    RISK_CATEGORY       VARCHAR(20),
+    CUSTOMER_COUNT      NUMBER,
+    AVG_CREDIT_SCORE    DECIMAL(6,2),
+    TOTAL_EXPOSURE      DECIMAL(20,2),
+    DEFAULT_RATE        DECIMAL(5,2),
+    FRAUD_RATE          DECIMAL(5,2),
+    AVG_LOAN_AMOUNT     DECIMAL(15,2),
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
-(1009, 17, '2024-05-20', 'Desk', 'Furniture', 1, 15000, 15000, 'Debit Card', 'Delivered'),
+-- Investment Performance Report
+CREATE TABLE IF NOT EXISTS INVESTMENT_PERFORMANCE (
+    REPORT_DATE         DATE,
+    ASSET_TYPE          VARCHAR(30),
+    SECTOR              VARCHAR(50),
+    TOTAL_INVESTED      DECIMAL(20,2),
+    CURRENT_VALUE       DECIMAL(20,2),
+    RETURN_PCT          DECIMAL(10,2),
+    AVG_DIVIDEND_YIELD  DECIMAL(5,2),
+    CUSTOMER_COUNT      NUMBER,
+    CREATED_AT          TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
-(1010, 21, '2024-05-22', 'Mouse', 'Accessories', 2, 1200, 2400, 'UPI', 'Pending');
+-- -----------------------------------------------------------
+-- STEP 7: SETUP PERMISSIONS (Optional)
+-- -----------------------------------------------------------
+-- Grant usage on database and schema
+-- GRANT USAGE ON DATABASE FINANCIAL_DB TO ROLE YOUR_ROLE;
+-- GRANT USAGE ON SCHEMA FINANCIAL_DB.RAW TO ROLE YOUR_ROLE;
+-- GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA FINANCIAL_DB.RAW TO ROLE YOUR_ROLE;
+
+-- -----------------------------------------------------------
+-- STEP 8: RESUME WAREHOUSE
+-- -----------------------------------------------------------
+ALTER WAREHOUSE FINANCE_WH RESUME;
+
+SELECT 'Snowflake Financial Data Warehouse Setup Complete!' AS STATUS;
