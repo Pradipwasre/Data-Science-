@@ -106,10 +106,10 @@ if st.button(" Analyze Data", type="primary"):
                 else:
                     with st.spinner("Generating business insight..."):
                         try:
-                            # Initialize Groq LLM
+                            # Initialize Groq LLM using updated model parameter
                             llm = ChatGroq(
                                 groq_api_key=GROQ_API_KEY,
-                                model_name="llama-3.1-8b-instant",
+                                model="openai/gpt-oss-120b",
                                 temperature=0.3
                             )
 
@@ -141,19 +141,17 @@ if st.button(" Analyze Data", type="primary"):
                                 template=template
                             )
 
-                            # Format the prompt
-                            formatted_prompt = prompt.format(
-                                count=count,
-                                mean=mean_val,
-                                min_val=min_val,
-                                max_val=max_val,
-                                range_val=range_val,
-                                variance=variance_val,
-                                std=std_val
-                            )
-
-                            # Get response from LLM
-                            response = llm.invoke(formatted_prompt)
+                            # Format and invoke prompt chain
+                            chain = prompt | llm
+                            response = chain.invoke({
+                                "count": count,
+                                "mean": mean_val,
+                                "min_val": min_val,
+                                "max_val": max_val,
+                                "range_val": range_val,
+                                "variance": variance_val,
+                                "std": std_val
+                            })
 
                             # Display the insight
                             st.success(response.content)
@@ -169,4 +167,4 @@ if st.button(" Analyze Data", type="primary"):
 
 # Footer
 st.markdown("---")
-st.markdown("<center>Made with  for Blinkit Operations Team</center>", unsafe_allow_html=True)
+st.markdown("<center>Made with ❤️ for Blinkit Operations Team</center>", unsafe_allow_html=True)
