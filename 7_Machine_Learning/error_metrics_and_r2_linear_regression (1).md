@@ -1,7 +1,7 @@
 # Error Metrics & R2 in Linear Regression
 ### A Complete Guide: Theory + Hands-On Example (Salary vs. Experience)
 
-> **Audience:** Classroom teaching + Interview preparation
+
 > **Prerequisite:** Basic understanding of Simple Linear Regression (`y = mx + c`)
 
 ---
