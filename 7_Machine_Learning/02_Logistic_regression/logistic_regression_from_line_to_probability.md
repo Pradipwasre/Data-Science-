@@ -2,7 +2,7 @@
 
 This guide takes the straight line `y = mx + c` and tunes it, one small step at a time, into logistic regression. Then it works through real numbers: one feature first, then two features, then where the slopes and intercept come from, and finally five students scored with the same values.
 
-Files used by this guide (keep them in the same folder as this .md file):
+
 
 - `diagram_1_one_feature_sigmoid.png`
 - `diagram_2_two_feature_boundary.png`
