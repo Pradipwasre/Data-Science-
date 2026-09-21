@@ -1,456 +1,459 @@
-# Logistic Regression: From y = mx + c to Probabilities
+# Logistic Regression: Tuning y = mx + c into a Probability
 
-This guide starts from the straight line you already know, shows where it breaks when the answer is Yes or No, and then shows the small change that fixes it.
+This guide takes the straight line `y = mx + c` and tunes it, one small step at a time, into logistic regression. Then it works through real numbers: one feature first, then two features, then where the slopes and intercept come from, and finally five students scored with the same values.
 
 Files used by this guide (keep them in the same folder as this .md file):
 
-- `linear_regression_problem.png`
-- `sigmoid_threshold.png`
+- `diagram_1_one_feature_sigmoid.png`
+- `diagram_2_two_feature_boundary.png`
+- `diagram_3_students_on_sigmoid.png`
 
 ---
 
 ## Table of Contents
 
-1. Why not linear regression?
-2. How the formula changes, step by step
-3. The sigmoid function and the 0.5 threshold
-4. Full worked example: admission prediction
-5. What the numbers mean
-6. Linear vs logistic at a glance
-7. Quick recap
+1. The formula: tuning y = mx + c
+2. See what the formula gives (one feature)
+3. Two features
+4. What m1, m2 and c mean, and where the values come from
+5. Apply the values on one record
+6. Apply the values on all the records
+7. Five new students with the same m and c
+8. What to notice
+9. Recap
 
 ---
 
-## 1. Why not linear regression?
+## 1. The formula: tuning y = mx + c
 
-Suppose we want to predict a Yes or No outcome:
+We start from the line we already know and change it in small steps.
 
-- Will the student be admitted? (1 = Yes, 0 = No)
-- Will the student pass? (1 = Pass, 0 = Fail)
-
-The target `y` can only be **0 or 1**. Let us see what happens if we just use the usual line `y = mx + c` anyway.
-
-### Issue 1: The output is not a valid probability
-
-A straight line never stops. It keeps going up and down forever, so it can produce numbers below 0 and above 1.
-
-Take the admission line with these values:
-
-```
-y = 1(GPA) + 0.05(Exam) - 6
-```
-
-| Student | GPA | Exam | Calculation | y |
-|---------|-----|------|-------------|---|
-| Strong | 4.0 | 100 | 4.0 + 5.0 - 6 | **3.0** |
-| Weak | 2.0 | 30 | 2.0 + 1.5 - 6 | **-2.5** |
-
-- A probability of 3.0 means 300 percent. That is impossible.
-- A probability of -2.5 means negative 250 percent. That is also impossible.
-
-We need an output that is always trapped between 0 and 1.
-
-### Issue 2: A straight line does not match 0/1 data
-
-The true answers jump from 0 to 1. They do not slope gently. A line is a poor shape for that kind of data.
-
-### Issue 3: One outlier can move the decision boundary
-
-Take 6 students, where `x` is hours studied and `y` is pass (1) or fail (0):
-
-| x (hours) | 1 | 2 | 3 | 4 | 5 | 6 |
-|-----------|---|---|---|---|---|---|
-| y | 0 | 0 | 0 | 1 | 1 | 1 |
-
-**Fit a line (least squares).**
-
-```
-mean of x = 3.5
-mean of y = 0.5
-
-m = 4.5 / 17.5 = 0.257
-c = 0.5 - (0.257)(3.5) = -0.4
-
-y = 0.257x - 0.4
-```
-
-Where does the line cross 0.5?
-
-```
-0.257x - 0.4 = 0.5
-x = 3.5
-```
-
-So students with 4 hours or more are predicted to pass. This is correct.
-
-**Now add one student who studied 20 hours and passed (a perfectly normal result).**
-
-The best fit line changes to:
-
-```
-y = 0.046x + 0.301
-```
-
-Where does it cross 0.5 now?
-
-```
-0.046x + 0.301 = 0.5
-x = 4.31
-```
-
-Check the student with 4 hours:
-
-```
-y = 0.046(4) + 0.301 = 0.486
-```
-
-0.486 is below 0.5, so this student is now predicted to **fail**, even though they actually passed. One extra correct data point damaged a prediction that was previously right.
-
-![Linear regression problem](linear_regression_problem.png)
-
-### Summary of the problems
-
-| Problem | Why it hurts |
-|---------|--------------|
-| Output goes below 0 and above 1 | Cannot be read as a probability |
-| Straight line vs 0/1 jump | Poor fit to the shape of the data |
-| Sensitive to far away points | The 0.5 boundary shifts for the wrong reason |
-
-**What we want:** keep the useful part of the line (weighting each feature), but force the final answer to stay between 0 and 1.
-
----
-
-## 2. How the formula changes, step by step
-
-### Step 1: Simple linear regression (one feature)
+**Step 1: the line**
 
 ```
 y = mx + c
 ```
 
-- `m` is the slope (how much y changes when x changes by 1)
-- `c` is the intercept (the starting value when x = 0)
+- `m` is the slope, `c` is the intercept.
+- The output can be any number, big or small, positive or negative.
 
-### Step 2: Add more features
-
-Each feature gets its **own slope**, because each feature pushes the result by a different amount.
+**Step 2: give the line a new name, z**
 
 ```
-y = m1*x1 + m2*x2 + c
+z = mx + c
 ```
 
-For admission prediction:
+Nothing changed in the maths. We only renamed it. `z` is now the raw score, not the final answer.
 
-- `x1` = GPA, `m1` = how strongly GPA pushes toward admission
-- `x2` = Exam score, `m2` = how strongly the exam score pushes toward admission
-- `c` = the baseline before any feature is counted
+**Step 3: pass z through the sigmoid function**
 
-Both effects add up into a single number.
+```
+h = 1 / (1 + e^-z)
+```
 
-### Step 3: Give the line a new name, z
+The sigmoid takes any number and returns a value strictly between 0 and 1. That is exactly what a probability looks like.
 
-We keep exactly the same line but call it `z`. It is no longer the final answer. It is only the raw score.
+**Step 4: put the line inside the sigmoid**
+
+```
+h = 1 / (1 + e^-(mx + c))
+```
+
+This is logistic regression. It is the same line `mx + c`, wrapped inside the sigmoid.
+
+**Step 5: turn the probability into a decision**
+
+```
+if h >= 0.5  ->  predict 1  (Yes)
+if h <  0.5  ->  predict 0  (No)
+```
+
+**The whole change in one view**
+
+```
+y = mx + c                      the line
+      |
+      v
+z = mx + c                      same line, renamed as raw score
+      |
+      v
+h = 1 / (1 + e^-z)              squash the score into 0 to 1
+      |
+      v
+h = 1 / (1 + e^-(mx + c))       the logistic regression formula
+      |
+      v
+h >= 0.5 -> 1, else 0           the decision
+```
+
+**Notation note.** Many books write the same thing with theta. Only the names change:
+
+| mx + c notation | Theta notation |
+|-----------------|----------------|
+| `c` | `theta0` |
+| `m1` | `theta1` |
+| `m2` | `theta2` |
+| `h` | `h_theta(x)` |
+
+`h` stands for hypothesis, which means the prediction.
+
+---
+
+## 2. See what the formula gives (one feature)
+
+Let the feature be `x` = hours studied, and the target be Pass (1) or Fail (0).
+
+Suppose the values are:
+
+```
+m = 2
+c = -6
+```
+
+So the formula becomes:
+
+```
+h = 1 / (1 + e^-(2x - 6))
+```
+
+### Worked calculations
+
+**x = 1 hour**
+
+```
+z = 2(1) - 6 = -4
+e^-z = e^4 = 54.598
+h = 1 / (1 + 54.598) = 1 / 55.598 = 0.0180
+0.0180 < 0.5  ->  predict 0 (Fail)
+```
+
+**x = 3 hours**
+
+```
+z = 2(3) - 6 = 0
+e^-z = e^0 = 1
+h = 1 / (1 + 1) = 0.5
+```
+
+**x = 5 hours**
+
+```
+z = 2(5) - 6 = 4
+e^-z = e^-4 = 0.0183
+h = 1 / (1 + 0.0183) = 1 / 1.0183 = 0.9820
+0.9820 >= 0.5  ->  predict 1 (Pass)
+```
+
+### Full table
+
+| x (hours) | z = 2x - 6 | e^-z | h = 1 / (1 + e^-z) | Prediction |
+|-----------|------------|------|--------------------|------------|
+| 0 | -6 | 403.43 | 0.0025 | 0 (Fail) |
+| 1 | -4 | 54.598 | 0.0180 | 0 (Fail) |
+| 2 | -2 | 7.389 | 0.1192 | 0 (Fail) |
+| **3** | **0** | **1.000** | **0.5000** | **boundary** |
+| 4 | 2 | 0.1353 | 0.8808 | 1 (Pass) |
+| 5 | 4 | 0.0183 | 0.9820 | 1 (Pass) |
+| 6 | 6 | 0.0025 | 0.9975 | 1 (Pass) |
+
+![One feature sigmoid](diagram_1_one_feature_sigmoid.png)
+
+### What this shows
+
+- The line part `z` goes from -6 to +6. That is a wide range.
+- After the sigmoid, every value sits between 0 and 1.
+- The curve is S shaped. It changes fast near the middle and slowly at both ends.
+- `h = 0.5` happens exactly where `z = 0`. Here that is `2x - 6 = 0`, so `x = 3`.
+
+**Why the threshold is at z = 0**
+
+```
+1 / (1 + e^-z) = 0.5
+1 + e^-z = 2
+e^-z = 1
+z = 0
+```
+
+So "h is at least 0.5" is the same as "z is at least 0". The decision boundary is where the line `mx + c` crosses zero:
+
+```
+x = -c / m = -(-6) / 2 = 3
+```
+
+---
+
+## 3. Two features
+
+Now let us predict college admission using two features:
+
+- `x1` = GPA (out of 4)
+- `x2` = Exam score (out of 100)
+
+Each feature needs its own slope, because each one pushes the result by a different amount. The line grows by one term:
 
 ```
 z = m1*x1 + m2*x2 + c
 ```
 
-`z` can be any number from very negative to very positive. That is fine, because the next step fixes the range.
-
-### Step 4: Squash z with the sigmoid
+Then the same sigmoid is applied:
 
 ```
-h(x) = 1 / (1 + e^(-z))
+h = 1 / (1 + e^-(m1*x1 + m2*x2 + c))
 ```
 
-The sigmoid takes any number and returns a value strictly between 0 and 1.
+- `m1` is the slope of GPA
+- `m2` is the slope of Exam score
+- `c` is the baseline, the starting point before any feature is counted
 
-### Step 5: The full logistic regression formula
-
-Replace `z` with the line:
-
-```
-h(x) = 1 / (1 + e^-(m1*x1 + m2*x2 + c))
-```
-
-This is literally `y = mx + c` placed inside the sigmoid.
-
-### Step 6: Meaning of the notation h(x) and theta
-
-Many textbooks write the same thing with the letter theta. Nothing new is happening, only the names change.
-
-| mx + c notation | Theta notation | Meaning |
-|-----------------|----------------|---------|
-| `c` | `theta0` | intercept (baseline) |
-| `m1` | `theta1` | weight of feature 1 (GPA) |
-| `m2` | `theta2` | weight of feature 2 (Exam) |
-| `z` | `theta0 + theta1*x1 + theta2*x2` | raw score |
-| `h(x)` | `h_theta(x)` | predicted probability |
-
-- `h` stands for hypothesis, which means the prediction
-- `theta` stands for the parameters, which means all the slopes and the intercept
-- `x` stands for the features
-
-### The whole evolution in one view
-
-```
-y = mx + c                          (one feature, continuous output)
-        |
-        v
-y = m1*x1 + m2*x2 + c               (many features, still a line)
-        |
-        v
-z = m1*x1 + m2*x2 + c               (rename it: raw score)
-        |
-        v
-h(x) = 1 / (1 + e^(-z))             (squash into 0 to 1)
-        |
-        v
-if h(x) >= 0.5  ->  predict 1
-if h(x) <  0.5  ->  predict 0
-```
+Nothing else changes. The single feature formula from Section 2 is just this formula with only one term.
 
 ---
 
-## 3. The sigmoid function and the 0.5 threshold
+## 4. What m1, m2 and c mean, and where the values come from
 
-The diagram below shows the sigmoid curve. The horizontal axis is `z` (the line part) and the vertical axis is the probability `h(x)`.
+### The data
 
-![Sigmoid curve with 0.5 threshold](sigmoid_threshold.png)
+The slopes and intercept are not guessed by hand. They are **derived from data**: past students whose result we already know. Here is a small set of past records:
 
-### Key points to read from the graph
+| Record | GPA (x1) | Exam (x2) | Actual result (y) |
+|--------|----------|-----------|-------------------|
+| R1 | 3.5 | 80 | 1 (Admitted) |
+| R2 | 2.5 | 40 | 0 (Not admitted) |
+| R3 | 3.9 | 90 | 1 (Admitted) |
+| R4 | 2.0 | 30 | 0 (Not admitted) |
+| R5 | 3.2 | 70 | 1 (Admitted) |
+| R6 | 3.0 | 50 | 0 (Not admitted) |
+| R7 | 2.8 | 85 | 1 (Admitted) |
+| R8 | 3.7 | 60 | 0 (Not admitted) |
 
-| Where z is | What h(x) does | Meaning |
-|------------|----------------|---------|
-| Very negative (like -6) | Close to 0 | Very confident: class 0 |
-| Exactly 0 | Exactly 0.5 | Undecided, this is the threshold |
-| Very positive (like +6) | Close to 1 | Very confident: class 1 |
+### How training finds the values
 
-### Sigmoid values table
+Training is a loop:
 
-| z | e^(-z) | 1 + e^(-z) | h = 1 / (1 + e^(-z)) |
-|---|--------|------------|----------------------|
-| -6 | 403.43 | 404.43 | 0.0025 |
-| -4 | 54.60 | 55.60 | 0.0180 |
-| -2 | 7.389 | 8.389 | 0.1192 |
-| -1 | 2.718 | 3.718 | 0.2689 |
-| **0** | **1.000** | **2.000** | **0.5000** |
-| 1 | 0.368 | 1.368 | 0.7311 |
-| 2 | 0.135 | 1.135 | 0.8808 |
-| 4 | 0.018 | 1.018 | 0.9820 |
-| 6 | 0.0025 | 1.0025 | 0.9975 |
+1. Start with a guess, for example `m1 = 0`, `m2 = 0`, `c = 0`. Every student then gets `h = 0.5`.
+2. For each record, compute `z` and then `h`.
+3. Compare `h` with the real result. If the real result is 1 and `h` is small, the error is large. If the real result is 0 and `h` is large, the error is also large.
+4. Nudge `m1`, `m2` and `c` a little in the direction that reduces the total error. This method is called gradient descent.
+5. Repeat until the error stops getting smaller.
 
-### Why the threshold sits at z = 0
-
-```
-h = 0.5
-1 / (1 + e^(-z)) = 0.5
-1 + e^(-z) = 2
-e^(-z) = 1
--z = 0
-z = 0
-```
-
-So the rule "predict 1 when h is at least 0.5" is the same as the rule "predict 1 when z is at least 0".
+The error measure used in logistic regression is called log loss:
 
 ```
-h(x) >= 0.5   <=>   z >= 0   <=>   m1*x1 + m2*x2 + c >= 0
+if actual = 1 :  error = -ln(h)
+if actual = 0 :  error = -ln(1 - h)
 ```
 
-### Text version of the graph
+For example, record R1 (actual 1) with `h = 0.8176` has error `-ln(0.8176) = 0.2014`, which is small. A record that is predicted badly gets a much larger error, and training keeps adjusting until the overall error is as low as it can get.
+
+### The values we get
+
+Suppose training on records like these gives:
 
 ```
-h(x)
-1.0 |                           ___________  <- close to 1 (class 1)
-    |                      ____/
-0.75|                  __/
-    |               _/
-0.5 |- - - - - - -o - - - - - - - - - -  <- threshold
-    |           _/  
-0.25|        __/
-    |  ____/
-0.0 |_/____________________________________ z
-   -6    -3     0      3      6
-   class 0     |     class 1
-          decision boundary (z = 0)
+m1 = 1        (slope for GPA)
+m2 = 0.05     (slope for Exam score)
+c  = -6       (intercept)
 ```
 
-The threshold of 0.5 is the default, not a law. If a wrong Yes is very costly (for example, approving a risky loan), you can raise it to 0.7 or 0.8. If missing a real Yes is costly (for example, detecting a disease), you can lower it.
+Note: these numbers are chosen so the arithmetic stays clean and they fit the records above well. In a real project a library finds the values for you, and they usually come out less round.
+
+The final model is:
+
+```
+z = 1*(GPA) + 0.05*(Exam) - 6
+h = 1 / (1 + e^-z)
+```
+
+From now on, **the same m1, m2 and c are used for every student**. Only the GPA and Exam values change.
+
+### What each value means in this example
+
+| Value | Meaning in this example |
+|-------|-------------------------|
+| `m1 = 1` | Every extra GPA point adds 1 to z, which pushes toward admission. |
+| `m2 = 0.05` | Every extra exam mark adds 0.05 to z. Ten more marks adds 0.5. |
+| `c = -6` | The starting handicap. A student with GPA 0 and Exam 0 has z = -6, so h = 0.0025. The features must add up to more than 6 before z turns positive. |
+
+Some useful ways to read the slopes:
+
+- **Trade off:** 1 GPA point adds 1 to z, and 20 exam marks add `20 x 0.05 = 1`. So 1 GPA point is worth 20 exam marks.
+- **Why m2 looks small:** the exam score goes up to 100, but GPA only goes up to 4. A small slope on a big number gives a fair contribution: the maximum from GPA is `1 x 4 = 4` and the maximum from Exam is `0.05 x 100 = 5`.
+- **Best possible student:** GPA 4.0 and Exam 100 gives `z = 4 + 5 - 6 = 3`.
+- **Worst possible student:** GPA 0 and Exam 0 gives `z = -6`.
+
+### The decision boundary
+
+The boundary is where `z = 0`:
+
+```
+1*(GPA) + 0.05*(Exam) - 6 = 0
+Exam = 120 - 20*(GPA)
+```
+
+| GPA | Exam needed to reach h = 0.5 |
+|-----|------------------------------|
+| 4.0 | 40 |
+| 3.5 | 50 |
+| 3.0 | 60 |
+| 2.5 | 70 |
+| 2.0 | 80 |
+
+Above this line, `h` is above 0.5 (predict Admitted). Below it, `h` is below 0.5 (predict Not admitted).
+
+![Two feature decision boundary](diagram_2_two_feature_boundary.png)
 
 ---
 
-## 4. Full worked example: admission prediction
+## 5. Apply the values on one record
 
-### Given values (using the mx + c style)
+Take record R1: GPA = 3.5, Exam = 80.
 
-```
-m1 = 1      (GPA slope)
-m2 = 0.05   (Exam score slope)
-c  = -6     (intercept)
-```
-
-Full model:
+**Step 1: compute z (the line part)**
 
 ```
-z    = 1*(GPA) + 0.05*(Exam) + (-6)
-h(x) = 1 / (1 + e^(-z))
-```
-
-### Student A: GPA = 3.5, Exam = 80
-
-**Step A: Compute the line (z)**
-
-```
+z = m1*x1 + m2*x2 + c
 z = (1)(3.5) + (0.05)(80) + (-6)
 z = 3.5 + 4.0 - 6
 z = 1.5
 ```
 
-**Step B: Compute e^(-z)**
+**Step 2: compute e^-z**
 
 ```
-e^(-1.5) = 0.2231
+e^-1.5 = 0.2231
 ```
 
-**Step C: Apply the sigmoid**
+**Step 3: apply the sigmoid**
 
 ```
-h(x) = 1 / (1 + 0.2231)
-h(x) = 1 / 1.2231
-h(x) = 0.8176   (about 82 percent)
+h = 1 / (1 + 0.2231)
+h = 1 / 1.2231
+h = 0.8176
 ```
 
-**Step D: Apply the threshold**
+**Step 4: apply the threshold**
 
 ```
-0.8176 >= 0.5   ->   Predict Admitted (Y = 1)
+0.8176 >= 0.5  ->  predict 1 (Admitted)
 ```
 
-### Student B: GPA = 2.5, Exam = 40
+The model says there is about an 82 percent chance of admission. The actual result was 1, so the prediction is correct.
+
+---
+
+## 6. Apply the values on all the records
+
+The same steps for all eight records:
+
+| Record | GPA | Exam | z | e^-z | h | Predicted | Actual | Correct? |
+|--------|-----|------|---|------|---|-----------|--------|----------|
+| R1 | 3.5 | 80 | 1.50 | 0.2231 | 0.8176 | 1 | 1 | Yes |
+| R2 | 2.5 | 40 | -1.50 | 4.4817 | 0.1824 | 0 | 0 | Yes |
+| R3 | 3.9 | 90 | 2.40 | 0.0907 | 0.9168 | 1 | 1 | Yes |
+| R4 | 2.0 | 30 | -2.50 | 12.1825 | 0.0759 | 0 | 0 | Yes |
+| R5 | 3.2 | 70 | 0.70 | 0.4966 | 0.6682 | 1 | 1 | Yes |
+| R6 | 3.0 | 50 | -0.50 | 1.6487 | 0.3775 | 0 | 0 | Yes |
+| R7 | 2.8 | 85 | 1.05 | 0.3499 | 0.7408 | 1 | 1 | Yes |
+| R8 | 3.7 | 60 | 0.70 | 0.4966 | 0.6682 | 1 | 0 | **No** |
+
+**Result: 7 out of 8 correct (87.5 percent).**
+
+R8 is the one miss. The student has a good GPA (3.7) and a fair exam score (60), so the model gives a 67 percent chance, but this student was not admitted. Real data always has cases like this, because admission depends on things the two features cannot see. Logistic regression does not need to be perfect. It needs to give sensible probabilities, and here it does: the wrong prediction is also the one with the largest error (`-ln(1 - 0.6682) = 1.10`, compared with 0.08 to 0.47 for the correct records).
+
+---
+
+## 7. Five new students with the same m and c
+
+These students are not in the records. We use the same values:
 
 ```
-z = (1)(2.5) + (0.05)(40) - 6
-z = 2.5 + 2.0 - 6
-z = -1.5
-
-e^(-(-1.5)) = e^(1.5) = 4.4817
-
-h(x) = 1 / (1 + 4.4817)
-h(x) = 1 / 5.4817
-h(x) = 0.1824   (about 18 percent)
-
-0.1824 < 0.5   ->   Predict Not Admitted (Y = 0)
+m1 = 1,  m2 = 0.05,  c = -6
 ```
 
-### Student C: GPA = 3.0, Exam = 60 (borderline)
+### Student A: GPA = 4.0, Exam = 100 (very strong)
+
+```
+z = (1)(4.0) + (0.05)(100) - 6
+z = 4.0 + 5.0 - 6 = 3.0
+e^-3.0 = 0.0498
+h = 1 / (1 + 0.0498) = 1 / 1.0498 = 0.9526
+0.9526 >= 0.5  ->  Admitted
+```
+
+### Student B: GPA = 2.2, Exam = 35 (weak)
+
+```
+z = (1)(2.2) + (0.05)(35) - 6
+z = 2.2 + 1.75 - 6 = -2.05
+e^2.05 = 7.7679
+h = 1 / (1 + 7.7679) = 1 / 8.7679 = 0.1141
+0.1141 < 0.5  ->  Not admitted
+```
+
+### Student C: GPA = 3.0, Exam = 60 (on the boundary)
 
 ```
 z = (1)(3.0) + (0.05)(60) - 6
-z = 3.0 + 3.0 - 6
-z = 0
-
-h(x) = 1 / (1 + e^0)
-h(x) = 1 / (1 + 1)
-h(x) = 0.5
+z = 3.0 + 3.0 - 6 = 0
+e^0 = 1
+h = 1 / (1 + 1) = 0.5000
 ```
 
-This student sits exactly on the decision boundary. The model is completely undecided.
+The model is completely undecided. With the rule `h >= 0.5`, this student would be predicted as Admitted, but it is really a coin flip.
 
-### Compare with the earlier linear regression problem
+### Student D: GPA = 3.8, Exam = 30 (high GPA, low exam)
 
-Remember the strong student (GPA 4.0, Exam 100) who got y = 3.0 and the weak student (GPA 2.0, Exam 30) who got y = -2.5 from the plain line? Now pass their z values through the sigmoid.
+```
+z = (1)(3.8) + (0.05)(30) - 6
+z = 3.8 + 1.5 - 6 = -0.7
+e^0.7 = 2.0138
+h = 1 / (1 + 2.0138) = 1 / 3.0138 = 0.3318
+0.3318 < 0.5  ->  Not admitted
+```
 
-| Student | z | h(x) | Result |
-|---------|---|------|--------|
-| Strong (4.0, 100) | 3.0 | 1 / (1 + e^-3) = 1 / 1.0498 = **0.9526** | Admitted |
-| Weak (2.0, 30) | -2.5 | 1 / (1 + e^2.5) = 1 / 13.182 = **0.0759** | Not admitted |
+### Student E: GPA = 2.6, Exam = 95 (low GPA, high exam)
 
-Both answers are now valid probabilities. The problem from Section 1 is solved.
+```
+z = (1)(2.6) + (0.05)(95) - 6
+z = 2.6 + 4.75 - 6 = 1.35
+e^-1.35 = 0.2592
+h = 1 / (1 + 0.2592) = 1 / 1.2592 = 0.7941
+0.7941 >= 0.5  ->  Admitted
+```
 
-### Summary table for all students
+### Summary of the five students
 
-| Student | GPA | Exam | z | h(x) | Prediction |
-|---------|-----|------|---|------|------------|
-| A | 3.5 | 80 | 1.5 | 0.8176 | Admitted (1) |
-| B | 2.5 | 40 | -1.5 | 0.1824 | Not admitted (0) |
-| C | 3.0 | 60 | 0.0 | 0.5000 | On the boundary |
+| Student | GPA | Exam | z | h | Prediction |
+|---------|-----|------|---|---|------------|
+| A | 4.0 | 100 | 3.00 | 0.9526 | Admitted (1) |
+| B | 2.2 | 35 | -2.05 | 0.1141 | Not admitted (0) |
+| C | 3.0 | 60 | 0.00 | 0.5000 | On the boundary |
+| D | 3.8 | 30 | -0.70 | 0.3318 | Not admitted (0) |
+| E | 2.6 | 95 | 1.35 | 0.7941 | Admitted (1) |
+
+![Five students on the sigmoid](diagram_3_students_on_sigmoid.png)
 
 ---
 
-## 5. What the numbers mean
+## 8. What to notice
 
-### The decision boundary is still a straight line
-
-Setting `z = 0` gives:
-
-```
-1*(GPA) + 0.05*(Exam) - 6 = 0
-```
-
-Example points on this line:
-
-| GPA | Exam needed |
-|-----|-------------|
-| 4.0 | 40 |
-| 3.0 | 60 |
-| 2.0 | 80 |
-| 1.0 | 100 |
-
-Any student above this line gets a probability higher than 0.5. Any student below it gets a probability lower than 0.5. That is why logistic regression is called a **linear classifier**, even though the sigmoid curve bends.
-
-### Each slope is a "push" on the balance scale
-
-- `m1 = 1`: every extra GPA point adds 1 to z
-- `m2 = 0.05`: every extra exam mark adds 0.05 to z
-- `c = -6`: the starting handicap that must be overcome
-
-A positive slope pushes toward admission. A negative slope would push away from admission.
-
-### Effect of a small change
-
-Student A had z = 1.5 and h = 0.8176. Raise the exam score by 10 marks:
-
-```
-z = 1.5 + (0.05)(10) = 2.0
-h = 1 / (1 + e^-2) = 0.8808
-```
-
-The probability rises from 81.8 percent to 88.1 percent. Notice it is not a fixed jump. The same change in z moves the probability a lot near z = 0 and only a little near the flat ends of the curve.
-
-### z is the log of the odds (optional, but useful)
-
-Odds are `p / (1 - p)`. For Student A:
-
-```
-p    = 0.8176
-odds = 0.8176 / 0.1824 = 4.48
-ln(4.48) = 1.5   <-- this is exactly z
-```
-
-So the line `z = mx + c` is really modelling the **log-odds**. Each unit increase in GPA multiplies the odds of admission by `e^1 = 2.718`, and each extra exam mark multiplies the odds by `e^0.05 = 1.051`.
+- **One model, many students.** The values `m1 = 1`, `m2 = 0.05`, `c = -6` never changed. Only the inputs changed.
+- **z is the straight line, h is the probability.** Student A has z = 3 and h = 0.95. Student B has z = -2.05 and h = 0.11. The sigmoid turns any z into a valid probability.
+- **Both features matter.** Student D has a very good GPA of 3.8 but is rejected, because the exam score is too low. To pass with GPA 3.8, the exam must satisfy `0.05 x Exam >= 2.2`, so the exam score must be at least 44, and D has only 30.
+- **One feature can make up for the other.** Student E has a low GPA of 2.6 but is admitted, because a 95 on the exam is more than the 68 needed at that GPA (`0.05 x Exam >= 3.4`).
+- **h is a confidence level.** 0.95 means very confident, 0.50 means undecided, 0.11 means confident of rejection.
+- **The threshold is a choice.** 0.5 is the default. If a wrong Yes is costly, raise it (for example 0.7). If missing a real Yes is costly, lower it.
 
 ---
 
-## 6. Linear vs logistic at a glance
+## 9. Recap
 
-| Feature | Linear regression | Logistic regression |
-|---------|-------------------|---------------------|
-| Predicts | A number (salary, marks) | A probability, then a class |
-| Formula | `y = m1*x1 + m2*x2 + c` | `h = 1 / (1 + e^-(m1*x1 + m2*x2 + c))` |
-| Output range | Minus infinity to plus infinity | 0 to 1 |
-| Curve shape | Straight line | S shaped (sigmoid) |
-| Threshold | Not needed | Usually 0.5 (z = 0) |
-| Typical use | Price, temperature, score | Admit or reject, spam or not, pass or fail |
+1. Start with the line: `y = mx + c`.
+2. Rename it `z` and add one slope per feature: `z = m1*x1 + m2*x2 + c`.
+3. Pass it through the sigmoid: `h = 1 / (1 + e^-z)`.
+4. `m1`, `m2` and `c` are learned from past records by reducing the error, not chosen by hand. In this guide they are `1`, `0.05` and `-6`.
+5. `c` is the baseline, and each slope says how strongly its feature pushes toward Yes.
+6. Predict 1 when `h >= 0.5`, which is the same as `z >= 0`. Otherwise predict 0.
+7. The same `m` and `c` are then applied to every new student.
 
----
-
-## 7. Quick recap
-
-1. Linear regression gives values below 0 and above 1, fits 0/1 data badly, and is thrown off by outliers.
-2. Logistic regression keeps the same line `z = m1*x1 + m2*x2 + c`.
-3. It passes `z` through the sigmoid `h = 1 / (1 + e^(-z))` to get a value between 0 and 1.
-4. `theta0` is just `c`, and `theta1`, `theta2`, and so on are just `m1`, `m2`, and so on.
-5. If `h >= 0.5` (which means `z >= 0`), predict 1. Otherwise predict 0.
-6. Student A: z = 1.5, h = 0.82, so the prediction is Admitted.
-
-**One line to remember:** logistic regression is a straight line that has been bent into a probability.
+**One line to remember:** logistic regression is a straight line `mx + c` that is passed through the sigmoid to become a probability.
