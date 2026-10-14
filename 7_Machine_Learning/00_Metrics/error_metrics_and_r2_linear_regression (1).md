@@ -8,6 +8,7 @@
 
 ## Roadmap
 
+
 | # | Topic | Why it matters |
 |---|-------|-----------------|
 | 1 | What is "Error" in a model? | Foundation for everything below |
